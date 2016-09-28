@@ -1,0 +1,114 @@
+/**
+ * Header Style Sheet
+ * Primavera Site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Iliya Melishev
+ */
+
+header {
+	background-color: @color_grey_light;
+	box-sizing: border-box;
+	padding: 0px calc(~'(100% - 960px)' / 2);
+	position: relative;
+}
+
+header > a.phone {
+	text-decoration: none;
+	color: black;
+	border: 1px solid @color_red;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.5em 1em;
+	border-radius: 5px;
+	background-color: white;
+	margin-top: 20px;
+	margin-bottom: 1em;
+	box-sizing: border-box;
+	transition: all 0.3s;
+	position: relative;
+	line-height: 100%;
+}
+
+header > a.phone:hover {
+	background-color: @color_red;
+	color: white;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+header > a.phone:hover svg {
+	fill:white;
+}
+
+header a svg {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 10px;
+}
+
+header > a > img {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 0.5em;
+}
+
+header > a > img.facebook {
+	position: absolute;
+	right: 105%;
+	top: 50%;
+	width: 30px;
+	height: 30px;
+	transform: translatey(-50%);
+}
+
+header nav {
+	display: block;
+	padding: 1em calc(~'(100% - 960px)' / 2);
+}
+
+header nav a {
+	text-decoration: none;
+	color: black;
+	margin-left: 2.5em;
+	display: inline-block;
+	vertical-align: middle;
+	border-bottom: 1px solid transparent;
+	transition: all 0.3s;
+	position: relative;
+}
+
+header nav a:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	height: 2px;
+	width: 0;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+header nav a:hover:after {
+	width: 100%;
+	background-color: @color_red;
+}
+
+header nav a:active {
+	color: @color_red;
+	border-bottom: 1px solid black;
+}
+
+header img.logo {
+	width: 230px;
+	height: auto;
+	position: absolute;
+	left: calc(~'(50% - 480px)');
+	top: 50%;
+	transform:translatey(-50%);
+}

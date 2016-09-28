@@ -1,0 +1,889 @@
+ /**
+ * Content Style Sheet
+ * Primavera Site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Iliya Melishev
+ */
+
+section#about {
+	background-image: url(../images/header-background-2.jpg);
+	background-repeat: no-repeat;
+	background-size: 1920px 500px;
+	background-position: 50% center;
+	padding: 50px calc(~'(100% - 960px)' / 2);
+}
+
+section#about article {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: calc(~'(50% - 240px)');
+	width: 45%;
+	box-sizing: border-box;
+	padding-left: 4em;
+}
+
+section#about article h1 {
+	font-size: 2.5em;
+	color: @color_red;
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+
+section#about article h3 {
+	margin: 0;
+	font-size: 2em;
+	padding-left: 1em;
+}
+
+section#about article p {
+	margin: 0;
+}
+
+section#about article p > strong {
+	margin: 0.5em;
+	display: inline-block;
+	font-size: 1.2em;
+	margin-right: 0;
+}
+
+section#about div {
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(~'(100% - 672px)');
+}
+
+section#about div h2 {
+	color: @color_red;
+	font-size: 1.2em;
+	font-weight: 700;
+	margin: 0;
+	margin-bottom: 0.5em;
+	text-align: center;
+	line-height: 100%;
+}
+
+section#about div form label {
+	display: block;
+	width: 100%;
+	padding-bottom: 0.5em;
+}
+
+section#about div form label:nth-of-type(2) {
+	display: inline-block;
+	vertical-align: middle;
+	width: 72%;
+}
+
+section#about div form label:nth-of-type(3) {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+	margin-right: 0.4em;
+}
+
+section#about div form label select {
+	padding: 0.5em;
+	border: 1px solid @color_grey;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	margin-bottom: 1em;
+	color: @color_grey_dark;
+	transition: all 0.3s;
+	margin: 0;
+}
+
+section#about div form label span {
+	display: block;
+	padding-bottom: 0.2em;
+}
+
+section#about div form label input {
+	padding: 0.5em;
+	display: block;
+	box-sizing: border-box;
+	border: 1px solid @color_grey;
+	margin-bottom: 1em;
+	width: 100%;
+	margin: 0;
+}
+
+section#about div form label select:hover,
+section#about div form label input:hover {
+	border: 1px solid @color_grey_dark;
+}
+
+section#about div form label select:focus,
+section#about div form label input:focus {
+	border: 1px solid @color_red;
+}
+
+section#about div form label.checkbox input {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	width: 5%;
+	height: 20px;
+}
+
+section#about div form label.checkbox span {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	border: 0;
+	padding-right: 0.5em;
+	width: 92%;
+}
+
+section#about div form div.controls {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+section#about div form div.controls button {
+	background-color: @color_red;
+	border: 1px solid transparent;
+	color: white;
+	font-size: 1.5em;
+	transition: all 0.3s;
+	width: 65%;
+	height: 100%;
+	padding: 0.3em 0;
+}
+
+section#about div form div.controls button:hover {
+	transform: scale(1.1);
+	box-shadow:  -2px 14px 17px -5px @color_grey_dark;
+	-moz-box-shadow: -2px 14px 17px -5px @color_grey_dark;
+	-webkit-box-shadow: -2px 14px 17px -5px @color_grey_dark;
+}
+
+section#about div form div.controls button:active {
+	background-color: darken(@color_red, 10%);
+}
+
+/*Form Horizonal */
+
+section#about.horizontal {
+	padding: 50px 0;
+	background-image: url(../images/header-background.jpg);
+	background-position: 50% center;
+	padding: 19px calc(~'(100% - 960px)' / 2);
+}
+
+section#about.horizontal article {
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 80%;
+}
+
+section#about.horizontal article p {
+	margin-bottom: 1em;
+}
+
+section#about.horizontal div {
+	display: block;
+	width: 70%;
+	background-color: fade(black, 10%);
+	padding-bottom: 1.5em;
+	position: relative;
+}
+
+section#about.horizontal > div:after {
+	display: block;
+	content: " ";
+	position: absolute;
+	top: -17px;
+	left: 90%;
+	border-style: solid;
+	border-width: 0 17px 17px;
+	border-color: fade(black, 10%) transparent;
+}
+
+section#about.horizontal div h4 {
+	margin: 0;
+	font-weight: 400;
+	padding-top: 1em;
+	padding-right: 2em;
+}
+
+section#about.horizontal div h2 {
+	margin: 0;
+	padding: 1em;
+	padding-right: 2em;
+	text-align: right;
+	position: relative;
+}
+
+section#about.horizontal div h2:after {
+	content: " ";
+	position: absolute;
+	top: 80%;
+	right: 34%;
+	transform: translatex(29%);
+	width: 80%;
+	height: 2px;
+	background-color: fade(white, 34%);
+}
+
+section#about.horizontal div form {
+	display: block;
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 0.5em;
+}
+
+section#about.horizontal div form label {
+	display: inline-block;
+	vertical-align: middle;
+	width: 24%;
+	padding: 0;
+}
+
+section#about.horizontal div form label input {
+	padding: 0.6em;
+}
+
+section#about.horizontal div form label:nth-of-type(2) {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20%;
+	margin: 0;
+	padding: 0;
+	padding-right: 20px;
+}
+
+section#about.horizontal div form label:nth-of-type(3) {
+	display: inline-block;
+	vertical-align: middle;
+	width: 11%;
+	margin: 0;
+	padding-bottom: 0;
+	padding-left: 20px;
+}
+
+section#about.horizontal div form div.controls {
+	display: inline-block;
+	vertical-align: middle;
+	width: 11%;
+	padding-right: 20px;
+	padding-top: 28px;
+	padding-bottom: 0;
+	background-color: transparent;
+}
+
+section#about.horizontal div form div.controls button {
+	width: 100%;
+	padding: 0.1em 0;
+}
+
+section#about.horizontal div form label.checkbox {
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translatex(-50%);
+	width: 100%;
+	display: block;
+}
+
+section#about.horizontal div form label.checkbox input {
+	width: 3%;
+}
+
+section#about.horizontal div form label.checkbox span {
+	padding: 0.5em;
+}
+
+section#about.horizontal div form label select {
+	padding: 0.57em;
+}
+
+/*
+* Product Section.
+*/
+
+section#product {
+	padding: 50px calc(~'(100% - 1200px)' / 2 );
+	display: block;
+	background-color: @color_grey_dark;
+	color: white;
+	text-align: center;
+}
+
+section#product h2 {
+	text-align: center;
+	margin: 0;
+	padding-bottom: 1em;
+}
+
+section#product ul {
+	display: block;
+	list-style: none;
+	margin: 0;
+}
+
+section#product ul li {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+	position: relative;
+}
+
+section#product ul li:after {
+	content: "";
+	background-image: url(../images/decoration.svg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 35px 35px;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 25%;
+	transform: translateY(-50%);
+	right: 100%;
+}
+
+section#product ul li:nth-of-type(4) {
+	margin: 0;
+}
+
+section#product ul li:nth-of-type(4):after {
+	display: none;
+}
+
+section#product ul li img {
+	width: 200px;
+	height: 200px;
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 3em;
+}
+
+section#product ul li h4 {
+	padding: 0 3em;
+	margin: 0;
+}
+
+section#product ul li p {
+	margin: 0;
+	padding: 0 3em;
+}
+
+section#product_shot {
+	background-image: url(../images/Riodontal_bg.jpg);
+	background-position: center center;
+	background-size: 687px 427px;
+	background-repeat: no-repeat;
+	height: 430px;
+	margin: 50px calc(~'(100% - 960px)' / 2 );
+	padding: 1em 0;
+}
+
+/*
+*Section Product Gallery
+*/
+
+section#product_gallery {
+	background-image: url(../images/bg_flower_grey.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	padding: 50px calc(~'(100% - 960px)' / 2 );
+	position: relative;
+}
+
+section#product_gallery ul {
+	list-style: none;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	margin: 0;
+	height: 500px;
+}
+
+section#product_gallery ul li {
+	padding-bottom: 40px;
+}
+
+section#product_gallery ul li a img {
+	border: 2px solid transparent;
+	display: block;
+	margin: 0 auto;
+	border: 2px solid @color_grey;
+}
+
+section#product_gallery ul li.active a img,
+section#product_gallery ul li a img:hover {
+	border: 2px solid @color_grey_dark;
+}
+
+
+section#product_gallery  div.thumb_large {
+	position: absolute;
+	top: 50%;
+	transform: translatey(-50%);
+	right: calc(~'50% - 379px');
+	left: auto;
+	visibility: hidden;
+	opacity: 0;
+	min-height: 500px;
+}
+
+section#product_gallery  div.thumb_large.visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+section#product_gallery  div.thumb_large img {
+	display: inline-block;
+	vertical-align: top;
+	border: 2px solid @color_grey;
+}
+
+section#product_gallery  div.thumb_large p {
+	display: inline-block;
+	vertical-align: top;
+	width: 378px;
+	box-sizing: border-box;
+	padding-right: 1em;
+	padding-left: 1em;
+	margin: 0;
+}
+
+/*
+* Section Details
+*/
+
+section#details {
+	padding: 50px calc(~'(100% - 960px)' / 2 );
+	position: relative;
+}
+
+section#details h2 {
+	font-weight: 300;
+	font-size: 1.8em;
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+
+section#details ul {
+	list-style: none;
+	display: block;
+	overflow: hidden;
+	padding-right: 10px;
+}
+
+section#details ul li {
+	display: block;
+	position: relative;
+	margin-bottom: 1em;
+	width: 70%;
+	overflow: hidden;
+	padding-right: 2em;
+}
+
+
+section#details ul li:after {
+	content: " ";
+	position: absolute;
+	bottom: 16px;
+	width: 300%;
+	height: 0.1px;
+	border: 2px dashed @color_grey;
+	border-top: 1px solid transparent;
+	border-right: 1px solid transparent;
+	margin-right: 1em;
+}
+
+section#details ul li svg {
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	fill:red;
+	border: 2px solid @color_grey_light;
+	border-radius: 100%;
+	padding: 0.5em;
+	margin-left: 0.5em;
+}
+
+section#details div.bone_picture {
+	width: 220px;
+	height: 220px;
+	background-color: white;
+	position: absolute;
+	right: calc(~'50% + 50px');
+	transform: translatex(-50%) translatey(-50%);
+	top: 57%;
+	border-radius: 100%;
+	background-image: url(../images/ingredients.jpg);
+	background-position: cover;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+section#details div.bone_picture svg {
+	position: absolute;
+	top: 100%;
+	transform: translatey(-100%);
+	left: 0;
+	background-color: @color_red;
+	border-radius: 100%;
+	width: 45px;
+	height: 45px;
+	margin: 0 auto;
+	padding: 1em;
+	fill: white;
+}
+
+/*
+*Section Information
+*/
+
+section#information {
+	background-color: @color_grey_dark;
+	height: calc(~'(50vw * 0.66)');
+	border-top: 1px solid @color_grey_light;
+	border-bottom: 1px solid @color_grey_light;
+	position: relative;
+	overflow: hidden;
+}
+
+section#information div#tabs {
+	position: absolute;
+	top: 0;
+	right: 50%;
+	width: 50%;
+	background-color: white;
+	z-index: 1;
+}
+
+section#information div#tabs a {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	color: black;
+	padding: 1em;
+}
+
+section#information div#tabs a.active {
+	background-color: @color_grey_dark;
+	color: white;
+}
+
+section#information div#tabs a.active svg {
+	fill: white;
+}
+
+section#information div#tabs a svg {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 0.5em;
+}
+
+section#information div#tabs a h5 {
+	padding: 1em 2em;
+}
+
+section#information div.content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	visibility: hidden;
+	box-sizing: border-box;
+	padding-right: calc(~'(50% + 1em)');
+	padding-left: 6em;
+	padding-top: 60px;
+	z-index: 0;
+	width: 100%;
+	height: inherit;
+	color: white;
+	margin: 0;
+
+	background-image: url(../images/experts_bg.jpg);
+	background-repeat: no-repeat;
+	background-size: 50% auto;
+	background-position: right top;
+}
+
+section#information div.content:nth-of-type(3) {
+	background-image: url(../images/services_bg.jpg);
+}
+
+section#information div.content:nth-of-type(4) {
+	background-image: url(../images/testimonials_bg.jpg);
+}
+
+section#information div.content article {
+	width: 480px;
+}
+
+section#information div.content.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+section#information div.content div.testemonials {
+	display: block;
+	position: relative;
+	background-color: inherit;
+	width: 100vw;
+	height: 100%;
+}
+
+section#information div.content div.testemonials article {
+	position: absolute;
+	top: 16px;
+	right: 0;
+	color: white;
+	border: 1px solid white;
+	box-sizing: border-box;
+	padding: 1em;
+	border-radius: 10px;
+	border: @color_grey solid 3px;
+	background-color: lighten(@color_grey_dark, 10%);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+	min-height: 214px;
+	width: 450px;
+}
+
+section#information div.content div.testemonials article p {
+	margin: 0;
+}
+
+section#information div.content div.testemonials article.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+section#information div.content div.testemonials article:after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 15px 15px 0;
+	border-color: lighten(@color_grey_dark, 10%) transparent;
+	display: block;
+	width: 0;
+	z-index: 1;
+	bottom: -14px;
+	right: 82px;
+}
+
+section#information div.content div.testemonials article:before {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 17px 17px 0;
+	border-color: @color_grey transparent;
+	display: block;
+	width: 0;
+	z-index: 0;
+	bottom: -19px;
+	right: 80px;
+}
+
+section#information div.content.visible div.control_panel {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+section#information div.testemonials.content.visible article {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+section#information div.content.visible article.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+section#information div.content div.testemonials article h5 {
+	margin: 0;
+	position: absolute;
+	color: white;
+	right: 0;
+	font-weight: 300;
+	top: 110%;
+	width: 230px;
+}
+
+section#information div#control_container {
+	position: absolute;
+	top: 242px;
+	right: 200px;
+	width: 100%;
+}
+
+section#information div#control_container:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -20px;
+	width: 3px;
+	height: 35px;
+	background-color: white;
+}
+
+section#information div#control_container a {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+section#information div#control_container a svg {
+	display: block;
+	width: 15px;
+	height: 15px;
+	fill:black;
+	border: 1px solid transparent;
+	background-color: @color_grey;
+	border-radius: 100%;
+	padding: 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+section#information div#control_container a.next svg:hover,
+section#information div#control_container a.prev svg:hover {
+	background-color: white;
+}
+
+section#information div#control_container a.next svg{
+	transform: rotate(180deg);
+}
+
+section#information div#control_container div.control_panel {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0 0.5em;
+}
+
+section#information div#control_container div.control_panel a.control {
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 3px;
+	padding: 0.7em 0.7em;
+	margin: 0em 0.2em;
+	border: 1px solid @color_grey_light;
+	border-radius: 100%;
+	background-color: alpha(white, 50%);
+	padding: 5px;
+	margin: 0 0.5em;
+}
+
+section#information div#control_container div.control_panel a.control.active {
+	background-color: @color_grey_light;
+}
+
+/*
+*Section Quality
+*/
+
+section#quality {
+	text-align: center;
+	position: relative;
+	padding: 50px 0;
+}
+
+section#quality article h2 {
+	font-weight: 300;
+	font-size: 2.5em;
+	margin: 0;
+	line-height: 100%;
+	padding-bottom: 0.5em;
+}
+
+section#quality article p {
+	font-size: 1.3em;
+}
+
+section#quality article p:last-child {
+	font-size: 1em;
+	margin-bottom: 0;
+}
+
+section#quality svg.arrow {
+	width: 30px;
+	height: 45px;
+	fill: @color_grey_dark;
+	background-color: @color_grey_light;
+	padding: 1em;
+	transform: rotate(-90deg) translatey(-50%);
+	position: absolute;
+	top: 75%;
+	right: calc(~'(50% - 530px)');
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+	section#product_gallery div.thumb_large p {
+		width: 350px;
+	}
+
+	section#information div#tabs {
+		width: calc(~'50vw ');
+	}
+
+	section#information div#tabs a {
+		width: 26.8%;
+	}
+
+	section#information div.content {
+		padding-top: 70px;
+		padding-right: calc(~'50% + 0.5em');
+		padding-left: 4em;
+	}
+
+	section#information div.content article {
+		width: 435px;
+	}
+	section#information div.content article p {
+		margin: 0;
+		padding-right: 5px;
+	}
+
+	section#information div.content div.testemonials article {
+		top: 0;
+		right: 4px;
+	}
+
+	section#information div.content div.testemonials article:before {
+		right: 40px;
+	}
+
+	section#information div.content div.testemonials article:after {
+		right: 42px;
+	}
+
+	section#information div.content div.testemonials article h5 {
+		top: 108%;
+	}
+
+	section#information div#control_container {
+		top: 223px;
+		width: 250px;
+	}
+
+	section#information div#control_container:before {
+		height: 27px;
+	}
+
+	section#information div#control_container a svg {
+		width: 10px;
+		height: 10px;
+	}
+
+	section#quality svg.arrow {
+		top: 50%;
+		right: calc(~'50% - 380px');
+	}
+}

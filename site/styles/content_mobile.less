@@ -1,0 +1,469 @@
+/**
+ * Content_Mobile Style Sheet
+ * Primavera Site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Iliya Melishev
+ */
+
+section#about {
+	padding-top: 80px;
+}
+
+section#about article {
+	display: block;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	position: relative;
+	z-index: 1;
+}
+
+section#about article h1 {
+	color: @color_red;
+	margin: 0;
+	margin-top: 1em;
+}
+
+section#about article h3 {
+	margin: 0;
+	padding-bottom: 0.5em;
+}
+
+section#about article p {
+	margin: 0;
+	padding-bottom: 0.5em;
+}
+
+section#about img.background {
+	display: block;
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin-top: -170px;
+}
+
+
+/*
+*Mobile Form Container
+*/
+section#about div {
+	padding-bottom: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	background-color: @color_grey_light;
+}
+
+section#about div h2 {
+	margin: 0;
+	color: @color_red;
+	text-align: center;
+}
+
+section#about div form {
+	display: block;
+	width: 100%;
+}
+
+section#about div form label {
+	display: block;
+	width: 100%;
+	padding: 0.5em 0;
+}
+
+section#about div form label:nth-of-type(2) {
+	display: inline-block;
+	vertical-align: middle;
+	width: 72%;
+}
+
+section#about div form label:nth-of-type(3) {
+	display: inline-block;
+	vertical-align: middle;
+	width: 25%;
+	margin-right: 0.4em;
+}
+
+section#about div form label select {
+	padding: 0.5em;
+	border: 1px solid @color_grey;
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	margin-bottom: 1em;
+	color: @color_grey_dark;
+	transition: all 0.3s;
+	margin: 0;
+}
+
+section#about div form label span {
+	display: block;
+	padding-bottom: 0.2em;
+}
+
+section#about div form label input {
+	padding: 0.5em;
+	display: block;
+	box-sizing: border-box;
+	border: 1px solid @color_grey;
+	margin-bottom: 1em;
+	width: 100%;
+	margin: 0;
+}
+
+section#about div form label.checkbox input {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	width: 5%;
+	height: 20px;
+}
+
+section#about div form label.checkbox span {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	border: 0;
+	padding-right: 0.5em;
+	width: 92%;
+}
+
+section#about div form div.controls {
+	display: block;
+	text-align: center;
+	padding: 0;
+}
+
+section#about div form div.controls button {
+	background-color: @color_red;
+	border: 1px solid transparent;
+	color: white;
+	font-size: 1.5em;
+	transition: all 0.3s;
+	width: 65%;
+	height: 100%;
+	padding: 0.3em 0;
+}
+
+/*
+*Section Mobile #Product
+*/
+
+section#product {
+	padding: 1em;
+	padding-top: 0.5em;
+	background-color: @color_grey_dark;
+	color: white;
+}
+
+section#product h2 {
+	margin: 0;
+	padding-bottom: 1.5em;
+	text-align: center;
+}
+
+section#product ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+	width: 100%;
+}
+
+section#product ul li {
+	display: block;
+	width: 100%;
+	position: relative;
+	margin-bottom: 4em;
+}
+
+section#product ul li:nth-of-type(4) {
+	margin-bottom: 1.5em;
+}
+
+section#product ul li img {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 65px;
+}
+
+section#product ul li h4 {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	padding-right: 40%;
+}
+
+section#product ul li p {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	padding-right: 40%;
+}
+
+/*
+*Section Mobile #Product_shot
+*/
+
+section#product_shot {
+	height: 200px;
+	padding: 1.5em;
+	background-image: url(../images/Riodontal_bg.jpg);
+	background-position: center center;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+/*
+*Section Mobile #product_gallery
+*/
+
+section#product_gallery {
+	padding: 0em 1em;
+}
+
+section#product_gallery p {
+	margin: 0;
+}
+
+section#product_gallery img {
+	display: block;
+	margin: 0 auto;
+	border: 2px solid @color_grey_light;
+	margin-bottom: 2em;
+	margin-top: 1em;
+}
+
+section#product_gallery img:nth-child(8) {
+	margin-bottom: 0;
+}
+
+/*
+* Section Mobile #Details
+*/
+
+section#details {
+	padding: 1em;
+}
+
+section#details h2 {
+	margin: 0;
+	padding-bottom: 1em;
+	text-align: center;
+	font-weight: 400;
+}
+
+section#details ul {
+	list-style: none;
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+section#details ul li {
+	display: block;
+	width: 100%;
+	padding-bottom: 1em;
+}
+
+section#details ul li svg {
+	width: 15px;
+	height: 15px;
+	fill: @color_red;
+	padding: 0.5em;
+	border-radius: 100%;
+	border: 1px solid @color_grey_light;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0.5em;
+}
+
+/*
+* Section Mobile #Information
+*/
+
+section#information {
+	display: block;
+	width: 100%;
+	background-color: @color_grey_dark;
+	height: 540px;
+	position: relative;
+}
+
+section#information div#tabs {
+	display: block;
+	width: 100%;
+	background-color: white;
+}
+
+section#information div#tabs a {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid black;
+	width: 32.7%;
+	text-align: center;
+	padding: 0.5em 0;
+	text-decoration: none;
+	color: black;
+}
+
+section#information div#tabs a:nth-of-type(1) {
+	border-left-color: transparent;
+}
+
+section#information div#tabs a:nth-of-type(2) {
+	border-left-color: transparent;
+}
+
+section#information div#tabs a svg {
+	fill: black;
+	width: 35px;
+	height: 35px;
+	display: block;
+	margin: 0 auto;
+}
+
+section#information div#tabs a.active svg,
+section#information div#tabs a.active {
+	background-color: @color_grey_dark;
+	color: white;
+	fill: white;
+}
+
+/*Section Mobile #Information Content*/
+
+section#information div.content {
+	position: absolute;
+	width: 100%;
+	top: 55px;
+	right: 0;
+	visibility: hidden;
+	opacity: 0;
+	color: white;
+}
+
+section#information div.content article {
+	padding: 1em;
+}
+
+section#information div.content.visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+section#information div.content div.testemonials {
+	position: relative;
+	width: 100%;
+	height: 392px;
+	margin-top: 20px;
+}
+
+section#information div.content div.testemonials article {
+	position: absolute;
+	top: 35px;
+	left: 0;
+	width: 90%;
+	visibility: hidden;
+	opacity: 0;
+	padding: 1em;
+}
+
+section#information div.content div.testemonials article h5 {
+	margin: 0;
+	padding: 1em 0;
+}
+
+section#information div.content div.testemonials article p {
+	margin: 0;
+}
+
+section#information div.content div.testemonials article.visible {
+	visibility: visible;
+	opacity: 1;
+}
+
+section#information div.content div.testemonials div#control_container {
+	position: absolute;
+	top: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	text-align: center;
+}
+
+section#information div.content div.testemonials div#control_container a {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+section#information div.content div.testemonials div#control_container a svg {
+	display: inline-block;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+}
+
+section#information div.content div.testemonials div#control_container a.next svg {
+	transform: scalex(-1);
+}
+
+section#information div.content div.testemonials div#control_container div.control_panel {
+	display: inline-block;
+}
+
+section#information div.content div.testemonials div#control_container div.control_panel a {
+	width: 20px;
+	height: 20px;
+	margin: 0 15px;
+	border-radius: 100%;
+	border: 1px solid white;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+section#information div.content div.testemonials div#control_container div.control_panel a.active {
+	background-color: white;
+}
+
+/*
+*Section Mobile #Quality
+*/
+
+section#quality {
+	padding: 1em;
+	position: relative;
+}
+
+section#quality article h2 {
+	margin: 0;
+	padding-bottom: 1em;
+	font-weight: 400;
+	text-align: center;
+}
+
+section#quality article img {
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+}
+
+section#quality article p {
+	text-align: center;
+}
+
+section#quality a {
+	position: absolute;
+	top: 30%;
+	right: 2%;
+}
+
+section#quality a svg {
+	width: 35px;
+	height: 35px;
+	background-color: @color_grey_light;
+	transform: rotate(-90deg);
+	padding: 5px;
+}

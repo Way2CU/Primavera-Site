@@ -1,0 +1,105 @@
+/**
+ * Header_mobile Style Sheet
+ * Primavera Site
+ *
+ * Copyright (c) 2016. by Way2CU, http://way2cu.com
+ * Authors:Iliya Melishev
+ */
+
+header div.mobile_title {
+	background-color: @color_grey;
+}
+
+header div.mobile_title img.logo {
+	display: block;
+	margin: 0 auto;
+	width: 35%;
+	height: auto;
+	padding-top: 1em;
+	padding-left: 4em;
+	padding-bottom: 1em;
+}
+
+header div.mobile_title div.social {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 5px;
+	right: auto;
+}
+
+header div.mobile_title div.social  a {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1em 0;
+	padding-right: 15px;
+}
+
+header div.mobile_title div.social  a img {
+	display: block;
+}
+
+header div.mobile_title div.social  a svg {
+	width: 30px;
+	height: 30px;
+}
+
+header div.mobile_title a.menu {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 5px;
+	transition: all 0.3s;
+	padding: 2em;
+}
+
+header div.mobile_title a.menu span {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 5px;
+	width: 35px;
+	height: 5px;
+	background-color: black;
+	transition: all 0.3s;
+}
+
+header div.mobile_title a.menu span:before {
+	content: " ";
+	position: absolute;
+	width: 35px;
+	height: 5px;
+	background-color: black;
+	top: -200%;
+	transition: all 0.3s;
+}
+
+header div.mobile_title a.menu span:after {
+	content: " ";
+	position: absolute;
+	width: 35px;
+	height: 5px;
+	background-color: black;
+	top: 200%;
+	transition: all 0.3s;
+}
+
+header div.mobile_title.visible a.menu span:after {
+	transform: rotate(45deg);
+	top: 0;
+}
+
+header div.mobile_title.visible a.menu span {
+	background-color: transparent;
+}
+
+header div.mobile_title.visible a.menu span:before {
+	transform: rotate(-45deg);
+	top: 0;
+}
+
+header nav.mobile_menu a {
+	padding: 1em;
+}
