@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title><cms:text constant="site_title"/></title>
+			<cms:collection  include="page_control"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+			<header id="home">
+				<cms:desktop>
+					<cms:module 
+						name="links"
+						action="show"
+						text_id="phone"
+						template="parts/link_phone.xml"
+					/>
+				<a href="#">
+				   	<img 
+						src="_BASEURL.'/site/images/whatsapp.svg'"
+						alt="whatsapp"
+						cms:eval="src"
+					/>
+				</a>
+				<a href="https://www.facebook.com/PLUS-by-TTM-797919950310591/?fref=ts" target="_blank" class="facebook">
+				<img 
+					src="_BASEURL.'/site/images/facebook.svg'"
+					alt="facebook"
+					cms:eval="src"
+				/>
+				</a>
+				<nav>
+					<cms:module 
+						name="links"
+						action="show_link_list"
+						group="nav"
+						template="parts/links_nav_list.xml"
+					/>
+				</nav>
+				<img 
+					src="_BASEURL.'/site/images/logo.svg'"
+					alt="primavera_plus"
+					cms:eval="src"
+					class="logo"
+				/>
+				</cms:desktop>
+				<cms:mobile>
+					<div class="mobile_title">
+						<a href="javascript:void(0)" class="menu">
+							<span></span>
+						</a>
+						<img 
+							src="_BASEURL.'/site/images/logo.svg'"
+							alt="primavera_plus"
+							cms:eval="src"
+							class="logo"
+						/>
+						<div class="social">
+							<cms:module 
+								name="links"
+								action="show"
+								text_id="phone"
+								template="parts/link_phone.xml"
+							/>
+						</div>
+					</div>
+				<nav class="mobile_menu">
+					<cms:desktop>
+						<cms:module 
+							name="links"
+							action="show_link_list"
+							group="nav"
+							template="parts/links_nav_list.xml"
+						/>
+					</cms:desktop>
+					<cms:mobile>
+						<cms:module 
+							name="links"
+							action="show_link_list"
+							group="nav_mobile"
+							template="parts/links_nav_list.xml"
+						/>
+					</cms:mobile>
+				</nav>
+				</cms:mobile>
+			</header>
+			<!-- Section about -->
+			<cms:if condition="$section == 'alternative'">
+					<section id="about" class="$section == 'alternative' ? 'horizontal' : null" cms:optional="class">
+						<cms:module 
+							name="articles"
+							action="show"
+							text_id="treatment_alternative"
+							template="parts/article.xml"
+						/>
+						<div>	
+							<h4><cms:text constant="alternative_title_form"/></h4>
+							<h2><cms:text constant="contact"/></h2>
+							<cms:module 
+								name="contact_form"
+								action="show"
+								text_id="contact_form"
+							/>
+						</div>
+					</section>
+			</cms:if>
+			<cms:if condition="$section != 'alternative'">
+					<section id="about">
+						<cms:module 
+							name="articles"
+							action="show"
+							text_id="treatment"
+							template="parts/article.xml"
+						/>
+						<cms:mobile>
+							<img 
+								src="_BASEURL.'/site/images/mobile_background.jpg'"
+								alt="background_mobile"
+								cms:eval="src"
+								class="background"
+							/>
+						</cms:mobile>
+							<div>
+								<h2><cms:text constant="contact"/></h2>
+								<cms:module 
+									name="contact_form"
+									action="show"
+									text_id="contact_form"
+								/>
+							</div>
+					</section>
+			</cms:if>
+
+			<!-- Section product -->
+			<section id="product">
+				<cms:module 
+					name="articles"
+					action="show_group"
+					text_id="plants"
+					template="parts/group_article.xml"
+				/>
+				<ul>
+					<cms:module 
+						name="articles"
+						action="show_list"
+						group="plants"
+						template="parts/article_list.xml"
+					/>
+				</ul>
+			</section>
+			<section id="product_shot"></section>
+
+			<section id="product_gallery">
+					<cms:desktop>
+					<ul id="images">
+						<cms:module 
+							name="gallery"
+							action="show_image_list"
+							group="gallery"
+							order_by="text_id"
+							template="parts/gallery_thumb_small.xml"
+						/>
+					</ul>
+						<cms:module 
+							name="gallery" 
+							action="show_image_list" 
+							group="gallery"
+							order_by="text_id"
+							template="parts/gallery_thumb_large.xml"
+						/>
+				</cms:desktop>
+				<cms:mobile>
+						<cms:module 
+							name="gallery" 
+							action="show_image_list" 
+							group="gallery"
+							order_by="text_id"
+							template="parts/gallery_thumb_large.xml"
+						/>
+				</cms:mobile>
+			</section>
+			<section id="details">
+				<cms:desktop>
+					<cms:module 
+						name="articles"
+						action="show_group"
+						text_id="details"
+						template="parts/group_article.xml"
+					/>
+					<ul>
+						<cms:module 
+							name="articles"
+							action="show_list"
+							group="details"
+							template="parts/details.xml"
+						/>
+					</ul>
+					<div class="bone_picture">
+						<cms:svg file="site-sprite.svg" symbol="check"/>
+					</div>
+				</cms:desktop>
+				<cms:mobile>
+					<cms:module 
+						name="articles"
+						action="show_group"
+						text_id="details"
+						template="parts/group_article.xml"
+					/>
+					<ul>
+						<cms:module 
+							name="articles"
+							action="show_list"
+							group="details"
+							template="parts/details.xml"
+						/>
+					</ul>
+				</cms:mobile>
+			</section>
+			<section id="information">
+				<div id="tabs">
+					<a href="javascript:void(0)">
+						<cms:svg file="site-sprite.svg" symbol="experts"/>
+						<cms:text constant="experts"/>
+					</a>
+					<a href="javascript:void(0)">
+						<cms:svg file="site-sprite.svg" symbol="service"/>
+						<cms:text constant="customers"/>
+					</a>
+					<a href="javascript:void(0)">
+						<cms:svg file="site-sprite.svg" symbol="like"/>
+						<cms:text constant="clients"/>
+					</a>
+				</div>
+				<div class="content">
+					<cms:module 
+						name="articles"
+						action="show_list"
+						group="experts"
+						template="stock/article_generic.xml"
+					/>
+				</div>
+				<div class="content">
+					<cms:module 
+						name="articles"
+						action="show_list"
+						group="services"
+						template="stock/article_generic.xml"
+					/>
+				</div>
+				<div class="content">
+					<div class="testemonials">
+						<cms:module 
+							name="articles"
+							action="show_list"
+							group="testemonials"
+							template="parts/testemonials.xml"
+						/>
+					<div id="control_container">
+						<a href="javascript:void(0)" class="prev">
+							<cms:svg file="site-sprite.svg" symbol="arrow"/>
+						</a>
+					<div class="control_panel"></div>
+						<a href="javascript:void(0)" class="next">
+							<cms:svg file="site-sprite.svg" symbol="arrow"/>
+						</a>
+					</div>
+					</div>
+				</div>
+			</section>
+			<section id="quality">
+				<cms:module 
+					name="articles"
+					action="show"
+					text_id="quality"
+					template="parts/article_quality.xml"
+				/>
+				<a href="#home">
+				<cms:svg file="site-sprite.svg" symbol="arrow" class="arrow" />
+				</a>
+			</section>
+			<footer>
+				<cms:desktop>
+					<cms:template file="stock/copyright.xml">
+						<param name="holder" value="copyright_holder"/>
+						<param name="text" value="copyright_text"/>
+						<param name="light" value=""/>
+					</cms:template>
+				</cms:desktop>
+				<cms:mobile>
+					<cms:template file="stock/copyright.xml">
+						<param name="holder" value="copyright_holder"/>
+						<param name="text" value="copyright_text"/>
+						<param name="light" value=""/>
+					</cms:template>
+				</cms:mobile>
+			</footer>
+		</body>
+	</html>
+</document>
