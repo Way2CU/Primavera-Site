@@ -44,12 +44,26 @@ Site.is_mobile = function() {
 
 	return result;
 };
+
+	Site.handle_language_load = function(data) {
+		Site.dialog
+		      .setContent(data['whatsapp_message'])
+		      .setSize(600, 200)
+		      .setClearOnClose(false)
+		      .setTitle(data['dialog_title']);
+
+		if(Site.is_mobile())
+		Site.dialog.setSize(300, 280);
+	};
+
 /**
  * Function called when document and images have been completely loaded.
  */
+
 Site.on_load = function() {
-	if (Site.is_mobile())
+	if (Site.is_mobile()) {
 		Site.mobile_menu = new Caracal.MobileMenu();
+	}
 
 	//Page Control for Product_gallery
 	Site.product_gallery = new PageControl('section#product_gallery','div.thumb_large');
@@ -77,8 +91,20 @@ Site.on_load = function() {
 		.attachControls($('div.control_panel a.control'))
 		.attachPreviousControl($('a.prev'))
 		.attachNextControl($('a.next'));
+
+	//Dialog js Whatsapp
+    	Site.dialog = new Dialog();
+	language_handler.getTextArrayAsync(null, ['whatsapp_message', 'dialog_title'], Site.handle_language_load);
+
+
+	//Whatsapp Click Handler
+	$("a.whatsapp").on("click", function(event){
+		event.preventDefault();
+		Site.dialog.show();
+		console.log("Eat my ass");
+	});
 };
-		
+
 
 // connect document `load` event with handler function
 $(Site.on_load);

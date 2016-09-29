@@ -1,0 +1,11 @@
+<document>
+	<article>
+		<h2><cms:var param="title" multilanguage="yes"/></h2>
+		<img 
+					src="_BASEURL.'/site/images/ttm.png'"
+					alt="ttm"
+					cms:eval="src"
+					/>
+		<cms:markdown param="content" multilanguage="yes"/>
+	</article>
+</document>

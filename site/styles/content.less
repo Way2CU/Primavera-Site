@@ -372,6 +372,16 @@ section#product ul li p {
 	padding: 0 3em;
 }
 
+/*
+*Section Product Shot
+*/
+
+body.hemorrhoids section#product_shot,
+body.fungus section#product_shot,
+body.psoriasis section#product_shot,
+body.cholesterol section#product_shot,
+body.arthritic section#product_shot,
+body.constipation section#product_shot,
 section#product_shot {
 	background-image: url(../images/Riodontal_bg.jpg);
 	background-position: center center;
@@ -381,6 +391,32 @@ section#product_shot {
 	margin: 50px calc(~'(100% - 960px)' / 2 );
 	padding: 1em 0;
 }
+
+body.constipation section#product_shot {
+	background-image: url(../images/Aperta.jpg);
+}
+
+body.arthritic section#product_shot {
+	background-image: url(../images/Preo_Force.jpg);
+}
+
+body.cholesterol section#product_shot {
+	background-image: url(../images/triger.jpg);
+}
+
+body.psoriasis section#product_shot {
+	background-image: url(../images/Relipso.jpg);
+}
+
+body.fungus section#product_shot {
+	background-image: url(../images/Xagaris.jpg);
+}
+
+body.hemorrhoids section#product_shot {
+	background-image: url(../images/Nomoroid.jpg);
+}
+
+
 
 /*
 *Section Product Gallery
@@ -486,6 +522,17 @@ section#details ul li {
 }
 
 
+body.psoriasis section#details ul li,
+body.constipation section#details ul li {
+	width: 85%;
+}
+
+body.hemorrhoids section#details ul li {
+	width: 80%;
+}
+
+
+
 section#details ul li:after {
 	content: " ";
 	position: absolute;
@@ -523,6 +570,39 @@ section#details div.bone_picture {
 	background-position: cover;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+
+body.constipation section#details div.bone_picture {
+	width: 300px;
+	height: 300px;
+	top: 55%;
+
+}
+
+body.psoriasis section#details div.bone_picture {
+	width: 250px;
+	height: 250px;
+	top: 55%;
+	right: calc(~'50% + 60px');
+
+}
+
+body.cholesterol section#details div.bone_picture {
+	width: 200px;
+	height: 200px;
+	top: 56%;
+	right: calc(~'50% + 113px');
+
+}
+
+body.fungus section#details div.bone_picture {
+	top: 60%;
+
+}
+
+body.hemorrhoids section#details div.bone_picture {
+	width: 250px;
+	height: 250px;
 }
 
 section#details div.bone_picture svg {
@@ -653,6 +733,19 @@ section#information div.content div.testemonials article {
 	transition: all 0.3s;
 	min-height: 214px;
 	width: 450px;
+}
+
+body.fungus section#information div.content div.testemonials article {
+	width: 463px;
+	padding: 0.5em;
+}
+
+body.cholesterol section#information div.content div.testemonials article {
+	width: 460px;
+}
+
+body.hemorrhoids section#information div.content div.testemonials article {
+	padding: 0.5em;
 }
 
 section#information div.content div.testemonials article p {
@@ -821,6 +914,39 @@ section#quality svg.arrow {
 	position: absolute;
 	top: 75%;
 	right: calc(~'(50% - 530px)');
+}
+
+/*
+Dialog Box
+*/
+
+div.dialog div.title {
+	text-align: center;
+	background-color: green;
+	color: white;
+}
+
+div.content div.inner_content {
+	box-sizing: border-box;
+	padding: 1em;
+	font-size: 1.8em;
+	text-align: center;
+}
+
+div.content div.inner_content a {
+	text-decoration: none;
+	color: green;
+}
+
+div.dialog div.command_bar a.close {
+	padding-left: 2em;
+	padding-right: 2em;
+	background-color: lighten(green, 10%);
+	color: white;
+}
+
+div.dialog div.command_bar a.close:hover {
+	background-color: green;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {

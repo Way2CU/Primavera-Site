@@ -9,7 +9,7 @@
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
-		<body>
+		<body class="$section" cms:eval="class">
 			<header id="home">
 				<cms:desktop>
 					<cms:module
@@ -34,7 +34,7 @@
 				</a>
 				<nav>
 					<a href="#home">
-						<cms:text constant="gums_link" />
+						<cms:text constant="psoriasis_link" />
 					</a>
 					<cms:module
 						name="links"
@@ -96,7 +96,7 @@
 						<cms:module
 							name="articles"
 							action="show"
-							text_id="treatment_gums_alternative"
+							text_id="treatment_psoriasis_alt"
 							template="parts/article.xml"
 						/>
 						<div>
@@ -115,7 +115,7 @@
 						<cms:module
 							name="articles"
 							action="show"
-							text_id="treatment_gums"
+							text_id="treatment_psoriasis"
 							template="parts/article.xml"
 						/>
 						<cms:mobile>
@@ -142,14 +142,14 @@
 				<cms:module
 					name="articles"
 					action="show_group"
-					text_id="plants_gums"
+					text_id="plants_psoriasis"
 					template="parts/group_article.xml"
 				/>
 				<ul>
 					<cms:module
 						name="articles"
 						action="show_list"
-						group="plants_gums"
+						group="plants_psoriasis"
 						template="parts/article_list.xml"
 					/>
 				</ul>
@@ -162,7 +162,7 @@
 						<cms:module
 							name="gallery"
 							action="show_image_list"
-							group="gallery_gums"
+							group="gallery_psoriasis"
 							order_by="text_id"
 							template="parts/gallery_thumb_small.xml"
 						/>
@@ -170,7 +170,7 @@
 						<cms:module
 							name="gallery"
 							action="show_image_list"
-							group="gallery_gums"
+							group="gallery_psoriasis"
 							order_by="text_id"
 							template="parts/gallery_thumb_large.xml"
 						/>
@@ -179,7 +179,7 @@
 						<cms:module
 							name="gallery"
 							action="show_image_list"
-							group="gallery_gums"
+							group="gallery_psoriasis"
 							order_by="text_id"
 							template="parts/gallery_thumb_large.xml"
 						/>
@@ -190,14 +190,14 @@
 					<cms:module
 						name="articles"
 						action="show_group"
-						text_id="details_gums"
+						text_id="details_psoriasis"
 						template="parts/group_article.xml"
 					/>
 					<ul>
 						<cms:module
 							name="articles"
 							action="show_list"
-							group="details_gums"
+							group="details_psoriasis"
 							template="parts/details.xml"
 						/>
 					</ul>
@@ -209,14 +209,14 @@
 					<cms:module
 						name="articles"
 						action="show_group"
-						text_id="details_gums"
+						text_id="details_psoriasis"
 						template="parts/group_article.xml"
 					/>
 					<ul>
 						<cms:module
 							name="articles"
 							action="show_list"
-							group="details_gums"
+							group="details_psoriasis"
 							template="parts/details.xml"
 						/>
 					</ul>
@@ -258,7 +258,7 @@
 						<cms:module
 							name="articles"
 							action="show_list"
-							group="testemonials_gums"
+							group="testemonials_psoriasis"
 							template="parts/testemonials.xml"
 						/>
 					<div id="control_container">

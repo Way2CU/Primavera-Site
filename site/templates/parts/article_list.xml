@@ -1,0 +1,7 @@
+<document>
+  <li>
+    <img src="_BASEURL.'/site/images/'.$params['text_id'].'.svg'" alt="$params['text_id']" cms:eval="src,alt"/>
+    <h4><cms:var param="title" multilanguage="yes"/></h4>
+    <cms:markdown param="content" multilanguage="yes"/>
+  </li>
+</document>

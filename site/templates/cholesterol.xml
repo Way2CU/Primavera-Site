@@ -9,38 +9,41 @@
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
-		<body>
+		<body class="$section" cms:eval="class">
 			<header id="home">
 				<cms:desktop>
-					<cms:module 
+					<cms:module
 						name="links"
 						action="show"
 						text_id="phone"
 						template="parts/link_phone.xml"
 					/>
-				<a href="#">
-				   	<img 
+				<a href="#" class="whatsapp">
+				   	<img
 						src="_BASEURL.'/site/images/whatsapp.svg'"
 						alt="whatsapp"
 						cms:eval="src"
 					/>
 				</a>
 				<a href="https://www.facebook.com/PLUS-by-TTM-797919950310591/?fref=ts" target="_blank" class="facebook">
-				<img 
+				<img
 					src="_BASEURL.'/site/images/facebook.svg'"
 					alt="facebook"
 					cms:eval="src"
 				/>
 				</a>
 				<nav>
-					<cms:module 
+					<a href="#home">
+						<cms:text constant="cholesterol_link" />
+					</a>
+					<cms:module
 						name="links"
 						action="show_link_list"
 						group="nav"
 						template="parts/links_nav_list.xml"
 					/>
 				</nav>
-				<img 
+				<img
 					src="_BASEURL.'/site/images/logo.svg'"
 					alt="primavera_plus"
 					cms:eval="src"
@@ -52,14 +55,14 @@
 						<a href="javascript:void(0)" class="menu">
 							<span></span>
 						</a>
-						<img 
+						<img
 							src="_BASEURL.'/site/images/logo.svg'"
 							alt="primavera_plus"
 							cms:eval="src"
 							class="logo"
 						/>
 						<div class="social">
-							<cms:module 
+							<cms:module
 								name="links"
 								action="show"
 								text_id="phone"
@@ -69,7 +72,7 @@
 					</div>
 				<nav class="mobile_menu">
 					<cms:desktop>
-						<cms:module 
+						<cms:module
 							name="links"
 							action="show_link_list"
 							group="nav"
@@ -77,7 +80,7 @@
 						/>
 					</cms:desktop>
 					<cms:mobile>
-						<cms:module 
+						<cms:module
 							name="links"
 							action="show_link_list"
 							group="nav_mobile"
@@ -88,18 +91,18 @@
 				</cms:mobile>
 			</header>
 			<!-- Section about -->
-			<cms:if condition="$section == 'alternative'">
-					<section id="about" class="$section == 'alternative' ? 'horizontal' : null" cms:optional="class">
-						<cms:module 
+			<cms:if condition="$action == 'alternative'">
+					<section id="about" class="$action == 'alternative' ? 'horizontal' : null" cms:optional="class">
+						<cms:module
 							name="articles"
 							action="show"
-							text_id="treatment_alternative"
+							text_id="treatment_cholesterol_alt"
 							template="parts/article.xml"
 						/>
-						<div>	
+						<div>
 							<h4><cms:text constant="alternative_title_form"/></h4>
 							<h2><cms:text constant="contact"/></h2>
-							<cms:module 
+							<cms:module
 								name="contact_form"
 								action="show"
 								text_id="contact_form"
@@ -107,16 +110,16 @@
 						</div>
 					</section>
 			</cms:if>
-			<cms:if condition="$section != 'alternative'">
+			<cms:if condition="$action != 'alternative'">
 					<section id="about">
-						<cms:module 
+						<cms:module
 							name="articles"
 							action="show"
-							text_id="treatment"
+							text_id="treatment_cholesterol"
 							template="parts/article.xml"
 						/>
 						<cms:mobile>
-							<img 
+							<img
 								src="_BASEURL.'/site/images/mobile_background.jpg'"
 								alt="background_mobile"
 								cms:eval="src"
@@ -125,7 +128,7 @@
 						</cms:mobile>
 							<div>
 								<h2><cms:text constant="contact"/></h2>
-								<cms:module 
+								<cms:module
 									name="contact_form"
 									action="show"
 									text_id="contact_form"
@@ -136,17 +139,17 @@
 
 			<!-- Section product -->
 			<section id="product">
-				<cms:module 
+				<cms:module
 					name="articles"
 					action="show_group"
-					text_id="plants"
+					text_id="plants_cholesterol"
 					template="parts/group_article.xml"
 				/>
 				<ul>
-					<cms:module 
+					<cms:module
 						name="articles"
 						action="show_list"
-						group="plants"
+						group="plants_cholesterol"
 						template="parts/article_list.xml"
 					/>
 				</ul>
@@ -156,27 +159,27 @@
 			<section id="product_gallery">
 					<cms:desktop>
 					<ul id="images">
-						<cms:module 
+						<cms:module
 							name="gallery"
 							action="show_image_list"
-							group="gallery"
+							group="gallery_cholesterol"
 							order_by="text_id"
 							template="parts/gallery_thumb_small.xml"
 						/>
 					</ul>
-						<cms:module 
-							name="gallery" 
-							action="show_image_list" 
-							group="gallery"
+						<cms:module
+							name="gallery"
+							action="show_image_list"
+							group="gallery_cholesterol"
 							order_by="text_id"
 							template="parts/gallery_thumb_large.xml"
 						/>
 				</cms:desktop>
 				<cms:mobile>
-						<cms:module 
-							name="gallery" 
-							action="show_image_list" 
-							group="gallery"
+						<cms:module
+							name="gallery"
+							action="show_image_list"
+							group="gallery_cholesterol"
 							order_by="text_id"
 							template="parts/gallery_thumb_large.xml"
 						/>
@@ -184,17 +187,17 @@
 			</section>
 			<section id="details">
 				<cms:desktop>
-					<cms:module 
+					<cms:module
 						name="articles"
 						action="show_group"
-						text_id="details"
+						text_id="details_cholesterol"
 						template="parts/group_article.xml"
 					/>
 					<ul>
-						<cms:module 
+						<cms:module
 							name="articles"
 							action="show_list"
-							group="details"
+							group="details_cholesterol"
 							template="parts/details.xml"
 						/>
 					</ul>
@@ -203,17 +206,17 @@
 					</div>
 				</cms:desktop>
 				<cms:mobile>
-					<cms:module 
+					<cms:module
 						name="articles"
 						action="show_group"
-						text_id="details"
+						text_id="details_cholesterol"
 						template="parts/group_article.xml"
 					/>
 					<ul>
-						<cms:module 
+						<cms:module
 							name="articles"
 							action="show_list"
-							group="details"
+							group="details_cholesterol"
 							template="parts/details.xml"
 						/>
 					</ul>
@@ -235,7 +238,7 @@
 					</a>
 				</div>
 				<div class="content">
-					<cms:module 
+					<cms:module
 						name="articles"
 						action="show_list"
 						group="experts"
@@ -243,7 +246,7 @@
 					/>
 				</div>
 				<div class="content">
-					<cms:module 
+					<cms:module
 						name="articles"
 						action="show_list"
 						group="services"
@@ -252,10 +255,10 @@
 				</div>
 				<div class="content">
 					<div class="testemonials">
-						<cms:module 
+						<cms:module
 							name="articles"
 							action="show_list"
-							group="testemonials"
+							group="testemonials_cholesterol"
 							template="parts/testemonials.xml"
 						/>
 					<div id="control_container">
@@ -271,7 +274,7 @@
 				</div>
 			</section>
 			<section id="quality">
-				<cms:module 
+				<cms:module
 					name="articles"
 					action="show"
 					text_id="quality"

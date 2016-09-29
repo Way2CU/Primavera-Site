@@ -1,0 +1,6 @@
+<document>
+	<li>
+		<cms:svg file="site-sprite.svg" symbol="$params['text_id']" cms:eval="symbol"/>
+		<cms:var param="title" multilanguage="yes"/>
+	</li>	
+</document>
