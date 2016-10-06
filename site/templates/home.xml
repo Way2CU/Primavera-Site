@@ -33,12 +33,51 @@
 				/>
 				</a>
 				<nav>
-					<cms:module
-						name="links"
-						action="show_link_list"
-						group="nav_lobby"
-						template="parts/links_nav_list.xml"
-					/>
+					<ul>
+						<li>
+							<a href="">
+								<cms:text constant="contact_us_lobby"/>
+							</a>
+						</li>
+						<li>
+							<a href="" class="products">
+								<cms:text constant="the_products"/>
+							</a>
+							<ul id="sub_menu">
+								<li>
+									<a href=""><cms:text constant="aperta"/></a>
+								</li>
+								<li>
+									<a href=""><cms:text constant="preho"/></a>
+								</li>
+								<li>
+									<a href=""><cms:text constant="triger"/></a>
+								</li>
+								<li>
+									<a href=""><cms:text constant="periodontal"/></a>
+								</li>
+								<li>
+									<a href=""><cms:text constant="xagaris"/></a>
+								</li>
+								<li>
+									<a href=""><cms:text constant="relipso"/></a>
+								</li>
+								<li>
+									<a href=""><cms:text constant="soluroids"/></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="">
+								<cms:text constant="about_us_lobby"/>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<cms:text constant="our_services"/>
+							</a>
+						</li>
+					</ul>
 				</nav>
 				<img
 					src="_BASEURL.'/site/images/logo.svg'"
@@ -119,11 +158,28 @@
 						<cms:module
 							name="gallery"
 							action="show_image_list"
-							group="gallery_constipation"
-							order_by="text_id"
-							template="parts/gallery_thumb_small.xml"
+							group="gallery_lobby"
+							template="parts/gallery_lobby.xml"
 						/>
 					</ul>
+			</section>
+
+			<section id="experts">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="experts_lobby"
+					template="stock/article_generic.xml"
+				/>
+			</section>
+
+			<section id="services">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="services_lobby"
+					template="stock/article_generic.xml"
+				/>
 			</section>
 
 			<section id="quality">
@@ -133,7 +189,7 @@
 					text_id="quality"
 					template="parts/article_quality.xml"
 				/>
-				<a href="#home">
+				<a href="#about">
 				<cms:svg file="site-sprite.svg" symbol="arrow" class="arrow" />
 				</a>
 			</section>
