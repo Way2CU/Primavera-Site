@@ -15,5 +15,19 @@
 	"cholesterol_link": "טיפול בכולסטרול",
 	"psoriasis_link" : "לטיפול בפסוריאסיס",
 	"fungus_link" : "לטיפול בפטרייה",
-	"hemorrhoids_links" : "לטיפול בטחורים"
+	"hemorrhoids_links" : "לטיפול בטחורים",
+	"press_here" : "לחץ כאן",
+	"about_us_lobby" : "צור קשר",
+	"the_products" : "מוצאים",
+	"contact_us_lobby" : "צור קשר",
+	"our_services" : "השירות שלנו",
+	"aperta" : "<strong>סדרת Aperta</strong><br>לטיפול בעצירות",
+	"preho" : "<strong>סדרת Preho</strong><br>לטיפול בדלקות מפרקים",
+	"triger" : "<strong>סדרת Triger</strong><br>לטיפול בכולסטרול",
+	"periodontal" : "<strong>סדרת Periodontal</strong><br>לטיפול בחניכיים",
+	"xagaris" : "<strong>סדרת Xagaris</strong><br>לטיפול בפטריה",
+	"relipso" : "<strong>סדרת Relipso</strong><br>לטיפול בפסוריאזיס",
+	"soluroids" : "<strong>סדרת Soluroids</strong><br>לטיפול בטחורים"
+
+
 }
