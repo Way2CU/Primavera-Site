@@ -6,6 +6,128 @@
  * Authors:Iliya Melishev
  */
 
+/*
+*Lobby #about
+*/
+
+.home {
+	padding-top: 121px;
+}
+
+.home section#about {
+	padding: 1em calc(~'(100% - 1200px)' / 2);
+	background-image: url(../images/header_lobby.jpg);
+	background-size: 1920px 350px;
+	border-bottom: 2px solid @color_grey;
+}
+
+.home section#about div {
+	width: 25%;
+}
+
+.home section#about article {
+	vertical-align: top;
+	text-align: center;
+	width: 45%;
+	margin-right: calc(~'(50% - 260px)');
+}
+
+.home section#about article h1 {
+	color: black;
+	font-size: 2em;
+	margin-top: 1em;
+}
+
+/*
+*Lobby Producg gallery
+*/
+
+.home section#product_gallery {
+	background-color: white;
+	background-image: none;
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+}
+
+.home section#product_gallery ul#images {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding-top: 2em;
+	height: auto;
+}
+
+.home section#product_gallery ul#images li {
+	display: inline-block;
+	vertical-align: top;
+	margin: 1em;
+	box-shadow: 0px 0px 6px -1px @color_grey;
+}
+
+.home section#product_gallery ul#images li h4 {
+	color: @color_red;
+	margin-bottom: 0;
+}
+
+.home section#product_gallery ul#images li p {
+	margin-top: 0;
+	font-weight: 700;
+}
+
+.home section#product_gallery ul#images li a {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	color: @color_grey_dark;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	border: 1px solid @color_grey_dark;
+	background-color: lighten(@color_grey, 15%);
+}
+
+.home section#product_gallery ul#images li a:hover {
+	border: 1px solid @color_red;
+	color: @color_red;
+}
+
+/*
+*Lobby Section Experts
+*/
+
+.home section#services,
+.home section#experts {
+	background-image: url(../images/experts_lobby.jpg);
+	background-size: 1920px 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 500px;
+	padding: 0 calc(~'(100% - 1200px)' / 2);
+	position: relative;
+}
+
+.home section#services {
+	background-image: url(../images/customer_lobby.jpg);
+}
+
+.home section#services article,
+.home section#experts article {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: calc(~'(50% - 600px)');
+}
+
+.home section#services article {
+	right: calc(~'(50% - 600px)');
+}
+
+.home section#experts article p {
+	font-size: 1.3em;
+}
+
+.home section#services article p {
+	font-size: 1.2em;
+}
+
 section#about {
 	background-image: url(../images/header-background-2.jpg);
 	background-repeat: no-repeat;
