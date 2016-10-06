@@ -16,6 +16,8 @@
 	z-index: 100000;
 	width: 100%;
 	border-bottom: 2px solid @color_grey;
+	top: 0;
+	left: 0;
 }
 
 .home header img.logo {
@@ -24,6 +26,64 @@
 
 .home header#home nav {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
+	position: relative;
+}
+
+.home header#home nav ul {
+	display: block;
+	width: 100%;
+	padding: 0;
+	list-style: none;
+}
+
+.home header#home nav ul li {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.home header#home nav li ul#sub_menu {
+	display: none;
+	width: 200px;
+	visibility: hidden;
+	opacity: 0;
+	text-align: center;
+	background-color: white;
+	border: 1px solid @color_grey;
+	max-height: 0;
+	transition: all 0.3s;
+}
+
+.home header#home nav li ul#sub_menu li {
+	display: block;
+	width: 100%;
+	padding: 0.5em;
+	position: relative;
+}
+
+.home header#home nav li ul#sub_menu li:after {
+	content: " ";
+	position: absolute;
+	top: 95%;
+	left: 50%;
+	transform: translateX(-44%);
+	height: 2px;
+	width: 80%;
+	background-color: @color_grey;
+}
+
+.home header#home nav li ul#sub_menu li:last-of-type:after {
+	background-color: transparent;
+}
+
+.home header#home nav li:hover ul#sub_menu {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+	position: absolute;
+	right: 0;
+	top: 57px;
+	max-height: 500px;
+	transition: all 0.3s;
 }
 
 header {
