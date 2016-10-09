@@ -52,7 +52,7 @@
 	display: block;
 	width: 100%;
 	text-align: center;
-	padding-top: 2em;
+	padding: 2em 0;
 	height: auto;
 }
 
@@ -61,6 +61,17 @@
 	vertical-align: top;
 	margin: 1em;
 	box-shadow: 0px 0px 6px -1px @color_grey;
+	transition: all 0.3s;
+}
+
+.home section#product_gallery ul#images_lobby li:hover {
+	transform: scale(1.1);
+}
+
+.home section#product_gallery ul#images_lobby li:hover a {
+	border: 1px solid white;
+	color: white;
+	background-color: @color_red;
 }
 
 .home section#product_gallery ul#images_lobby li h4 {
