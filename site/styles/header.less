@@ -9,6 +9,7 @@
 /*
 *Header Lobby
 */
+
 .home header#home {
 	padding: 0 calc(~'(100% - 1200px)' / 2 );
 	position: fixed;
@@ -60,7 +61,6 @@
 .home header#home nav li ul#sub_menu li {
 	display: block;
 	width: 100%;
-	padding: 0.5em;
 	position: relative;
 }
 
@@ -69,10 +69,21 @@
 	position: absolute;
 	top: 95%;
 	left: 50%;
-	transform: translateX(-44%);
+	transform: translateX(-50%);
 	height: 2px;
 	width: 80%;
 	background-color: @color_grey;
+	transition: all 0.5s;
+}
+
+.home header#home nav li ul#sub_menu li:hover:after {
+	background-color: @color_red;
+}
+
+.home header#home nav li ul#sub_menu li a {
+	margin: 0 auto;
+	display: block;
+	padding: 0.5em;
 }
 
 .home header#home nav li ul#sub_menu li a strong {
@@ -171,12 +182,12 @@ header nav a {
 	position: relative;
 }
 
-header nav a:after {
+header nav > ul > li > a:after {
 	content: " ";
 	display: block;
 	position: absolute;
 	right: 0;
-	top: 100%;
+	top: 50%;
 	height: 2px;
 	width: 0;
 	background: transparent;
