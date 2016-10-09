@@ -116,12 +116,18 @@
 						/>
 					</cms:desktop>
 					<cms:mobile>
-						<cms:module
-							name="links"
-							action="show_link_list"
-							group="nav_mobile"
-							template="parts/links_nav_list.xml"
-						/>
+						<a href="#experts">
+							<cms:text constant="about_us_lobby"/>
+						</a>
+						<a href="#product_gallery">
+							<cms:text constant="the_products"/>
+						</a>
+						<a href="#about">
+							<cms:text constant="contact_us_lobby"/>
+						</a>
+						<a href="#services">
+							<cms:text constant="our_services"/>
+						</a>
 					</cms:mobile>
 				</nav>
 				</cms:mobile>
