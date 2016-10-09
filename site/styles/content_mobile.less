@@ -1,10 +1,101 @@
 /**
- * Content_Mobile Style Sheet
+ * Content_Mobile_Lobby Style Sheet
  * Primavera Site
  *
  * Copyright (c) 2016. by Way2CU, http://way2cu.com
  * Authors:Iliya Melishev
  */
+
+/*
+*Mobile Lobby
+*/
+
+.home section#about article h1 {
+	color: black;
+	font-size: 1.5em;
+}
+
+/*
+*Lobby Product gallery
+*/
+
+.home section#product_gallery {
+	padding: 0;
+}
+
+.home section#product_gallery ul {
+	padding: 1em 0.5em;
+	list-style: none;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.home section#product_gallery ul li {
+	display: inline-block;
+	vertical-align: top;
+	width: 45%;
+	box-shadow: 0px 0px 6px -1px @color_grey;
+	margin: 0.5em;
+	text-align: center;
+	min-height: 280px;
+}
+
+.home section#product_gallery ul li img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: none;
+	margin: 0;
+}
+
+.home section#product_gallery ul li h4 {
+	font-weight: 400;
+	color: @color_red;
+	width: 90%;
+	display: block;
+	margin: 0 auto;
+	padding: 0.5em 0;
+	min-height: 3em;
+}
+
+.home section#product_gallery ul li p {
+	padding-bottom: 0.5em;
+	min-height: 3em;
+}
+
+.home section#product_gallery ul#images_lobby li a {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	color: @color_grey_dark;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	border: 1px solid @color_grey_dark;
+	background-color: lighten(@color_grey, 15%);
+}
+
+/*
+*Lobby Experts & services
+*/
+.home section#services,
+.home section#experts {
+	background-image: url(../images/lobby_mobile_experts.jpg);
+	background-position: bottom center;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+
+.home section#services article,
+.home section#experts article {
+	padding-bottom: 20em;
+}
+
+.home section#services {
+	background-image: url(../images/mobile_lobby_services.jpg);
+}
 
 section#about {
 	padding-top: 80px;
