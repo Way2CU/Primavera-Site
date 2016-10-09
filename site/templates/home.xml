@@ -174,7 +174,7 @@
 				<cms:module
 					name="articles"
 					action="show"
-					text_id="experts_lobby"
+					text_id="services_lobby"
 					template="stock/article_generic.xml"
 				/>
 			</section>
@@ -183,7 +183,7 @@
 				<cms:module
 					name="articles"
 					action="show"
-					text_id="services_lobby"
+					text_id="experts_lobby"
 					template="stock/article_generic.xml"
 				/>
 			</section>
