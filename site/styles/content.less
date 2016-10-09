@@ -1076,8 +1076,31 @@ div.dialog div.command_bar a.close:hover {
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
-	.home section#experts {
-	background-position: calc(~'50% - 100px') center;
+	.home section#about {
+		background-image: url(../images/ipad_header-lobby3.jpg);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: center;
+		padding: 0;
+		min-height: 500px;
+	}
+
+	.home section#about article {
+		margin-right: calc(~'(50% - 250px)');
+		padding-left: 3em;
+	}
+
+	.home section#about article h1 {
+		margin-top: 3em;
+	}
+
+	.home section#about div {
+		width: 29%;
+		padding-top: 4em;
+	}
+
+	.home section#about div form div.controls {
+		padding-top: 1em;
 	}
 
 	.home section#experts article {
@@ -1085,13 +1108,22 @@ div.dialog div.command_bar a.close:hover {
 		right: auto;
 	}
 
+	.home section#experts,
 	.home section#services {
-	background-position: calc(~'50% + 100px') center;
+		background-image: url(../images/ipad_customer_lobby.jpg);
+		background-size: 100% auto;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.home section#experts {
+		background-image: url(../images/ipad_experts_lobby.jpg);
 	}
 
 	.home section#services article {
 		right: calc(~'(50% - 450px)');
 		left: auto;
+		width: 65%;
 	}
 
 	section#product_gallery div.thumb_large p {
@@ -1154,5 +1186,20 @@ div.dialog div.command_bar a.close:hover {
 	section#quality svg.arrow {
 		top: 50%;
 		right: calc(~'50% - 380px');
+	}
+
+	body.constipation section#details div.bone_picture {
+		right: calc(~'(50% - 70px)');
+		width: 350px;
+		height: 350px;
+	}
+
+	body.constipation section#product_gallery div.thumb_large p {
+		padding-left: 0;
+		width: 360px;
+	}
+
+	body.constipation section#details ul li {
+		width: 83%;
 	}
 }
