@@ -6,106 +6,6 @@
  * Authors:Iliya Melishev
  */
 
-/*
-*Header Lobby
-*/
-
-.home header#home {
-	padding: 0 calc(~'(100% - 1200px)' / 2 );
-	position: fixed;
-	z-index: 100000;
-	width: 100%;
-	border-bottom: 2px solid @color_grey;
-	top: 0;
-	left: 0;
-}
-
-.home header img.logo {
-	left: calc(~'(50% - 600px)');
-}
-
-.home header#home nav {
-	padding: 0 calc(~'(100% - 1200px)' / 2 );
-	position: relative;
-}
-
-.home header#home nav ul {
-	display: block;
-	width: 100%;
-	padding: 0;
-	list-style: none;
-	margin: 0;
-}
-
-.home header#home nav ul li {
-	display: inline-block;
-	vertical-align: top;
-}
-
-.home header#home nav ul li a {
-	padding-bottom: 1em;
-}
-
-.home header#home nav li ul#sub_menu {
-	display: none;
-	width: 200px;
-	visibility: hidden;
-	opacity: 0;
-	text-align: center;
-	background-color: white;
-	border: 1px solid @color_grey;
-	max-height: 0;
-	transition: all 0.3s;
-}
-
-.home header#home nav li ul#sub_menu li {
-	display: block;
-	width: 100%;
-	position: relative;
-}
-
-.home header#home nav li ul#sub_menu li:after {
-	content: " ";
-	position: absolute;
-	top: 95%;
-	left: 50%;
-	transform: translateX(-50%);
-	height: 2px;
-	width: 80%;
-	background-color: @color_grey;
-	transition: all 0.5s;
-}
-
-.home header#home nav li ul#sub_menu li:hover:after {
-	background-color: @color_red;
-}
-
-.home header#home nav li ul#sub_menu li a {
-	margin: 0 auto;
-	display: block;
-	padding: 0.5em;
-}
-
-.home header#home nav li ul#sub_menu li a strong {
-	color: @color_red;
-	font-weight: 400;
-}
-
-.home header#home nav li ul#sub_menu li:last-of-type:after {
-	background-color: transparent;
-}
-
-.home header#home nav li:hover ul#sub_menu {
-	display: block;
-	visibility: visible;
-	opacity: 1;
-	position: absolute;
-	right: 0;
-	top: 105%;
-	max-height: 500px;
-	transition: all 0.3s;
-}
-
 header {
 	background-color: @color_grey_light;
 	box-sizing: border-box;
@@ -211,6 +111,123 @@ header img.logo {
 	left: calc(~'(50% - 480px)');
 	top: 50%;
 	transform:translatey(-50%);
+}
+
+/*
+*Header Lobby
+*/
+
+.home header#home {
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
+	position: fixed;
+	z-index: 100000;
+	width: 100%;
+	border-bottom: 2px solid @color_grey;
+	top: 0;
+	left: 0;
+}
+
+.home header img.logo {
+	left: calc(~'(50% - 600px)');
+}
+
+.home header#home nav {
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
+	position: relative;
+}
+
+.home header#home nav ul {
+	display: block;
+	width: 100%;
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+
+.home header#home nav ul li {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.home header#home nav ul li a {
+	padding-bottom: 1em;
+}
+
+.home header#home nav ul li a:after {
+	content: " ";
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	height: 2px;
+	width: 0;
+	background: transparent;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+.home header#home nav ul li a:hover:after {
+	width: 100%;
+	background-color: @color_red;
+}
+
+.home header#home nav li ul#sub_menu {
+	display: none;
+	width: 200px;
+	visibility: hidden;
+	opacity: 0;
+	text-align: center;
+	background-color: white;
+	border: 1px solid @color_grey;
+	max-height: 0;
+	transition: all 0.3s;
+}
+
+.home header#home nav li ul#sub_menu li {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+.home header#home nav li ul#sub_menu li:after {
+	content: " ";
+	position: absolute;
+	top: 95%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 2px;
+	width: 80%;
+	background-color: @color_grey;
+	transition: all 0.5s;
+}
+
+.home header#home nav li ul#sub_menu li:hover:after {
+	background-color: @color_red;
+}
+
+.home header#home nav li ul#sub_menu li a {
+	margin: 0 auto;
+	display: block;
+	padding: 0.5em;
+}
+
+.home header#home nav li ul#sub_menu li a strong {
+	color: @color_red;
+	font-weight: 400;
+}
+
+.home header#home nav li ul#sub_menu li:last-of-type:after {
+	background-color: transparent;
+}
+
+.home header#home nav li:hover ul#sub_menu {
+	display: block;
+	visibility: visible;
+	opacity: 1;
+	position: absolute;
+	right: 0;
+	top: 105%;
+	max-height: 500px;
+	transition: all 0.3s;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
