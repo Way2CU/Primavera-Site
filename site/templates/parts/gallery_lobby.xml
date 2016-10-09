@@ -1,17 +1,17 @@
 <document>
-	<li>
-		<img
-			src="gallery::getThumbnailById($params['id'], null, 150, Thumbnail::CONSTRAIN_WIDTH)"
-			alt="$params['title'][$language]"
-			cms:eval="src,alt"
-			/>
-		<h4><cms:var param="title" multilanguage="yes"/></h4>
-		<p><cms:var param="description" multilanguage="yes"/></p>
-		<a
-			href="url_Make('', $params['text_id'])"
-			cms:eval="href"
-			>
-			<cms:text constant="press_here"/>
-		</a>
-	</li>
+		<li>
+			<img
+				src="gallery::getThumbnailById($params['id'], null, 150, Thumbnail::CONSTRAIN_WIDTH)"
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+				/>
+			<h4><cms:var param="title" multilanguage="yes"/></h4>
+			<p><cms:var param="description" multilanguage="yes"/></p>
+			<a
+				href="url_Make('', $params['text_id'])"
+				cms:eval="href"
+				>
+				<cms:text constant="press_here"/>
+			</a>
+		</li>
 </document>
