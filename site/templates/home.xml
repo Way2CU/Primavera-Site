@@ -160,14 +160,12 @@
 					</section>
 
 			<section id="product_gallery">
-					<ul id="images_lobby">
 						<cms:module
 							name="gallery"
 							action="show_image_list"
 							group="gallery_lobby"
 							template="parts/gallery_lobby.xml"
 						/>
-					</ul>
 			</section>
 
 			<section id="experts">
