@@ -20,58 +20,50 @@
 */
 
 .home section#product_gallery {
-	padding: 0;
+	background-color: white;
+	text-align: center;
+	background-image: none;
 }
 
-.home section#product_gallery ul {
-	padding: 1em 0.5em;
-	list-style: none;
+.home section#product_gallery a {
 	display: block;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-}
-
-.home section#product_gallery ul li {
-	display: inline-block;
-	vertical-align: top;
-	width: 45%;
+	width: 240px;
 	box-shadow: 0px 0px 6px -1px @color_grey;
-	margin: 0.5em;
-	text-align: center;
+	text-decoration: none;
+	transition: all 0.3s;
+	margin: 1.5em auto;
 	min-height: 280px;
 }
 
-.home section#product_gallery ul li img {
+.home section#product_gallery a img {
+	display: block;
+	margin: 0 auto;
+	border: none;
+}
+
+.home section#product_gallery a span,
+.home section#product_gallery a p,
+.home section#product_gallery a h4 {
+	margin: 0 auto;
 	display: block;
 	width: 100%;
-	height: auto;
-	border: none;
-	margin: 0;
-}
-
-.home section#product_gallery ul li h4 {
-	font-weight: 400;
-	color: @color_red;
-	width: 90%;
-	display: block;
-	margin: 0 auto;
-	padding: 0.5em 0;
-	min-height: 3em;
-}
-
-.home section#product_gallery ul li p {
-	padding-bottom: 0.5em;
-	min-height: 3em;
-}
-
-.home section#product_gallery ul#images_lobby li a {
-	display: block;
-	width: 50%;
-	margin: 0 auto;
-	color: @color_grey_dark;
 	text-decoration: none;
+	color: @color_red;
+	padding-top: 0.5em;
+}
+
+.home section#product_gallery a p {
+	color: black;
+	margin-top: 0;
+	padding-bottom: 1em;
+	padding-top: 0;
+}
+
+.home section#product_gallery a span {
+	display: block;
+	width: 30%;
+	margin: 0 auto;
+	color: black;
 	padding: 0.5em 1em;
 	border: 1px solid @color_grey_dark;
 	background-color: lighten(@color_grey, 15%);
