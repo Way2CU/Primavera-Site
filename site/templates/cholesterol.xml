@@ -43,24 +43,28 @@
 						template="parts/links_nav_list.xml"
 					/>
 				</nav>
-				<img
-					src="_BASEURL.'/site/images/logo.svg'"
-					alt="primavera_plus"
-					cms:eval="src"
-					class="logo"
-				/>
+				<a href="url_Make(' ', 'home')" cms:eval="href">
+					<img
+						src="_BASEURL.'/site/images/logo.svg'"
+						alt="primavera_plus"
+						cms:eval="src"
+						class="logo"
+					/>
+				</a>
 				</cms:desktop>
 				<cms:mobile>
 					<div class="mobile_title">
 						<a href="javascript:void(0)" class="menu">
 							<span></span>
 						</a>
-						<img
-							src="_BASEURL.'/site/images/logo.svg'"
-							alt="primavera_plus"
-							cms:eval="src"
-							class="logo"
-						/>
+						<a href="url_Make(' ', 'home')" cms:eval="href">
+							<img
+								src="_BASEURL.'/site/images/logo.svg'"
+								alt="primavera_plus"
+								cms:eval="src"
+								class="logo"
+							/>
+						</a>
 						<div class="social">
 							<cms:module
 								name="links"
