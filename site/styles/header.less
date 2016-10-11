@@ -170,8 +170,11 @@ header img.logo {
 	background-color: @color_red;
 }
 
-.home header#home nav li ul#sub_menu {
-	display: none;
+.home header#home nav ul li ul#sub_menu {
+	position: absolute;
+	right: 0;
+	top: 105%;
+	min-height: 440px;
 	width: 200px;
 	visibility: hidden;
 	opacity: 0;
@@ -180,15 +183,16 @@ header img.logo {
 	border: 1px solid @color_grey;
 	max-height: 0;
 	transition: all 0.3s;
+	transition-delay: 0.5s;
 }
 
-.home header#home nav li ul#sub_menu li {
+.home header#home nav ul li ul#sub_menu li {
 	display: block;
 	width: 100%;
 	position: relative;
 }
 
-.home header#home nav li ul#sub_menu li:after {
+.home header#home nav ul li ul#sub_menu li:after {
 	content: " ";
 	position: absolute;
 	top: 95%;
@@ -215,19 +219,16 @@ header img.logo {
 	font-weight: 400;
 }
 
-.home header#home nav li ul#sub_menu li:last-of-type:after {
-	background-color: transparent;
-}
-
 .home header#home nav li:hover ul#sub_menu {
 	display: block;
 	visibility: visible;
 	opacity: 1;
-	position: absolute;
-	right: 0;
-	top: 105%;
-	max-height: 500px;
 	transition: all 0.3s;
+	transtion-delay: 0s;
+}
+
+.home header#home nav li:hover ul#sub_menu li a:after {
+	display: none;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
