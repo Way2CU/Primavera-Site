@@ -1,27 +1,27 @@
 <document>
 	<cms:desktop>
-	  <a href="$params['url']" cms:eval="href" class="phone">
-		    <cms:svg file="site-sprite.svg" symbol="$params['text_id']" cms:eval="symbol"/>
-		    <cms:var param="text" multilanguage="yes"/>
-	  </a>
-  	</cms:desktop>
-  	<cms:mobile>
+		<a href="$params['url']" cms:eval="href" class="phone">
+			<cms:svg file="site-sprite.svg" symbol="$params['text_id']" cms:eval="symbol"/>
+			<cms:var param="text" multilanguage="yes"/>
+		</a>
+	</cms:desktop>
+	<cms:mobile>
 		<a href="" target="_blank" class="whatsapp">
-	   	<img 
-			src="_BASEURL.'/site/images/whatsapp.svg'"
-			alt="whatsapp"
-			cms:eval="src"
-		/>
+			<img
+				src="_BASEURL.'/site/images/whatsapp.svg'"
+				alt="whatsapp"
+				cms:eval="src"
+				/>
 		</a>
 		<a href="https://www.facebook.com/PLUS-by-TTM-797919950310591/?fref=ts" target="_blank" class="facebook">
-	    	<img 
-			src="_BASEURL.'/site/images/facebook.svg'"
-			alt="facebook"
-			cms:eval="src"
-		/>
+			<img
+				src="_BASEURL.'/site/images/facebook.svg'"
+				alt="facebook"
+				cms:eval="src"
+				/>
 		</a>
-	  	<a href="$params['url']" cms:eval="href" class="phone">
-	    	<cms:svg file="site-sprite.svg" symbol="$params['text_id']" cms:eval="symbol"/>
-  		</a>
-  	</cms:mobile>
+		<a href="$params['url']" cms:eval="href" class="phone">
+			<cms:svg file="site-sprite.svg" symbol="$params['text_id']" cms:eval="symbol"/>
+		</a>
+	</cms:mobile>
 </document>

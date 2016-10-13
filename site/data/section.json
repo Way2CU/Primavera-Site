@@ -1,3 +1,18 @@
 {
-	"/": "home.xml"
+	"/": "home.xml",
+	"/plus": "plus/home.xml",
+	"/plus/gums": "plus/gums.xml",
+	"/plus/gums/{alternative}": "plus/gums.xml",
+	"/plus/constipation": "plus/constipation.xml",
+	"/plus/constipation/{alternative}": "plus/constipation.xml",
+	"/plus/arthritic": "plus/arthritic.xml",
+	"/plus/arthritic/{alternative}": "plus/arthritic.xml",
+	"/plus/cholesterol": "plus/cholesterol.xml",
+	"/plus/cholesterol/{alternative}": "plus/cholesterol.xml",
+	"/plus/psoriasis": "plus/psoriasis.xml",
+	"/plus/psoriasis/{alternative}": "plus/psoriasis.xml",
+	"/plus/fungus": "plus/fungus.xml",
+	"/plus/fungus/{alternative}": "plus/fungus.xml",
+	"/plus/hemorrhoids": "plus/hemorrhoids.xml",
+	"/plus/hemorrhoids/{alternative}": "plus/hemorrhoids.xml"
 }

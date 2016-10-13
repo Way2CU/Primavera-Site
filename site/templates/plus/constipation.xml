@@ -17,41 +17,42 @@
 						action="show"
 						text_id="phone"
 						template="parts/link_phone.xml"
-					/>
-				<a href="#" class="whatsapp">
-				   	<img
-						src="_BASEURL.'/site/images/whatsapp.svg'"
-						alt="whatsapp"
-						cms:eval="src"
-					/>
-				</a>
-				<a href="https://www.facebook.com/PLUS-by-TTM-797919950310591/?fref=ts" target="_blank" class="facebook">
-				<img
-					src="_BASEURL.'/site/images/facebook.svg'"
-					alt="facebook"
-					cms:eval="src"
-				/>
-				</a>
-				<nav>
-					<a href="#home">
-					<cms:text constant="constipation_link" />
+						/>
+					<a href="#" class="whatsapp">
+						<img
+							src="_BASEURL.'/site/images/whatsapp.svg'"
+							alt="whatsapp"
+							cms:eval="src"
+							/>
 					</a>
-					<cms:module
-						name="links"
-						action="show_link_list"
-						group="nav"
-						template="parts/links_nav_list.xml"
-					/>
-				</nav>
-				<a href="url_Make(' ', 'home')" cms:eval="href">
-					<img
-						src="_BASEURL.'/site/images/logo.svg'"
-						alt="primavera_plus"
-						cms:eval="src"
-						class="logo"
-					/>
-				</a>
+					<a href="https://www.facebook.com/PLUS-by-TTM-797919950310591/?fref=ts" target="_blank" class="facebook">
+						<img
+							src="_BASEURL.'/site/images/facebook.svg'"
+							alt="facebook"
+							cms:eval="src"
+							/>
+					</a>
+					<nav>
+						<a href="#home">
+							<cms:text constant="constipation_link" />
+						</a>
+						<cms:module
+							name="links"
+							action="show_link_list"
+							group="nav"
+							template="parts/links_nav_list.xml"
+							/>
+					</nav>
+					<a href="url_Make(' ', 'home')" cms:eval="href">
+						<img
+							src="_BASEURL.'/site/images/logo.svg'"
+							alt="primavera_plus"
+							cms:eval="src"
+							class="logo"
+							/>
+					</a>
 				</cms:desktop>
+
 				<cms:mobile>
 					<div class="mobile_title">
 						<a href="javascript:void(0)" class="menu">
@@ -63,7 +64,7 @@
 								alt="primavera_plus"
 								cms:eval="src"
 								class="logo"
-							/>
+								/>
 						</a>
 						<div class="social">
 							<cms:module
@@ -71,74 +72,76 @@
 								action="show"
 								text_id="phone"
 								template="parts/link_phone.xml"
-							/>
+								/>
 						</div>
 					</div>
-				<nav class="mobile_menu">
-					<cms:desktop>
-						<cms:module
-							name="links"
-							action="show_link_list"
-							group="nav"
-							template="parts/links_nav_list.xml"
-						/>
-					</cms:desktop>
-					<cms:mobile>
-						<cms:module
-							name="links"
-							action="show_link_list"
-							group="nav_mobile"
-							template="parts/links_nav_list.xml"
-						/>
-					</cms:mobile>
-				</nav>
+					<nav class="mobile_menu">
+						<cms:desktop>
+							<cms:module
+								name="links"
+								action="show_link_list"
+								group="nav"
+								template="parts/links_nav_list.xml"
+								/>
+						</cms:desktop>
+						<cms:mobile>
+							<cms:module
+								name="links"
+								action="show_link_list"
+								group="nav_mobile"
+								template="parts/links_nav_list.xml"
+								/>
+						</cms:mobile>
+					</nav>
 				</cms:mobile>
 			</header>
+
 			<!-- Section about -->
-			<cms:if condition="$action == 'alternative'">
-					<section id="about" class="$action == 'alternative' ? 'horizontal' : null" cms:optional="class">
-						<cms:module
-							name="articles"
-							action="show"
-							text_id="treatment_constipation_alt"
-							template="parts/article.xml"
+			<cms:if condition="isset($_REQUEST['alternative'])">
+				<section id="about" class="$action == 'alternative' ? 'horizontal' : null" cms:optional="class">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="treatment_constipation_alt"
+						template="parts/article.xml"
 						/>
-						<div>
-							<h4><cms:text constant="alternative_title_form"/></h4>
-							<h2><cms:text constant="contact"/></h2>
-							<cms:module
-								name="contact_form"
-								action="show"
-								text_id="contact_form"
+					<div>
+						<h4><cms:text constant="alternative_title_form"/></h4>
+						<h2><cms:text constant="contact"/></h2>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact_form"
 							/>
-						</div>
-					</section>
+					</div>
+				</section>
 			</cms:if>
-			<cms:if condition="$action != 'alternative'">
-					<section id="about">
-						<cms:module
-							name="articles"
-							action="show"
-							text_id="treatment_constipation"
-							template="parts/article.xml"
+
+			<cms:if condition="!isset($_REQUEST['alternative'])">
+				<section id="about">
+					<cms:module
+						name="articles"
+						action="show"
+						text_id="treatment_constipation"
+						template="parts/article.xml"
 						/>
-						<cms:mobile>
-							<img
-								src="_BASEURL.'/site/images/mobile_background.jpg'"
-								alt="background_mobile"
-								cms:eval="src"
-								class="background"
+					<cms:mobile>
+						<img
+							src="_BASEURL.'/site/images/mobile_background.jpg'"
+							alt="background_mobile"
+							cms:eval="src"
+							class="background"
 							/>
-						</cms:mobile>
-							<div>
-								<h2><cms:text constant="contact"/></h2>
-								<cms:module
-									name="contact_form"
-									action="show"
-									text_id="contact_form"
-								/>
-							</div>
-					</section>
+					</cms:mobile>
+					<div>
+						<h2><cms:text constant="contact"/></h2>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="contact_form"
+							/>
+					</div>
+				</section>
 			</cms:if>
 
 			<!-- Section product -->
@@ -148,20 +151,20 @@
 					action="show_group"
 					text_id="plants_constipation"
 					template="parts/group_article.xml"
-				/>
+					/>
 				<ul>
 					<cms:module
 						name="articles"
 						action="show_list"
 						group="plants_constipation"
 						template="parts/article_list.xml"
-					/>
+						/>
 				</ul>
 			</section>
 			<section id="product_shot"></section>
 
 			<section id="product_gallery">
-					<cms:desktop>
+				<cms:desktop>
 					<ul id="images">
 						<cms:module
 							name="gallery"
@@ -169,23 +172,23 @@
 							group="gallery_constipation"
 							order_by="text_id"
 							template="parts/gallery_thumb_small.xml"
-						/>
+							/>
 					</ul>
-						<cms:module
-							name="gallery"
-							action="show_image_list"
-							group="gallery_constipation"
-							order_by="text_id"
-							template="parts/gallery_thumb_large.xml"
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="gallery_constipation"
+						order_by="text_id"
+						template="parts/gallery_thumb_large.xml"
 						/>
 				</cms:desktop>
 				<cms:mobile>
-						<cms:module
-							name="gallery"
-							action="show_image_list"
-							group="gallery_constipation"
-							order_by="text_id"
-							template="parts/gallery_thumb_large.xml"
+					<cms:module
+						name="gallery"
+						action="show_image_list"
+						group="gallery_constipation"
+						order_by="text_id"
+						template="parts/gallery_thumb_large.xml"
 						/>
 				</cms:mobile>
 			</section>
@@ -196,14 +199,14 @@
 						action="show_group"
 						text_id="details_constipation"
 						template="parts/group_article.xml"
-					/>
+						/>
 					<ul>
 						<cms:module
 							name="articles"
 							action="show_list"
 							group="details_constipation"
 							template="parts/details.xml"
-						/>
+							/>
 					</ul>
 					<div class="bone_picture">
 						<cms:svg file="site-sprite.svg" symbol="check"/>
@@ -215,14 +218,14 @@
 						action="show_group"
 						text_id="details_constipation"
 						template="parts/group_article.xml"
-					/>
+						/>
 					<ul>
 						<cms:module
 							name="articles"
 							action="show_list"
 							group="details_constipation"
 							template="parts/details.xml"
-						/>
+							/>
 					</ul>
 				</cms:mobile>
 			</section>
@@ -247,7 +250,7 @@
 						action="show_list"
 						group="experts"
 						template="stock/article_generic.xml"
-					/>
+						/>
 				</div>
 				<div class="content">
 					<cms:module
@@ -255,7 +258,7 @@
 						action="show_list"
 						group="services"
 						template="stock/article_generic.xml"
-					/>
+						/>
 				</div>
 				<div class="content">
 					<div class="testemonials">
@@ -264,16 +267,16 @@
 							action="show_list"
 							group="testemonials_constipation"
 							template="parts/testemonials.xml"
-						/>
-					<div id="control_container">
-						<a href="javascript:void(0)" class="prev">
-							<cms:svg file="site-sprite.svg" symbol="arrow"/>
-						</a>
-					<div class="control_panel"></div>
-						<a href="javascript:void(0)" class="next">
-							<cms:svg file="site-sprite.svg" symbol="arrow"/>
-						</a>
-					</div>
+							/>
+						<div id="control_container">
+							<a href="javascript:void(0)" class="prev">
+								<cms:svg file="site-sprite.svg" symbol="arrow"/>
+							</a>
+							<div class="control_panel"></div>
+							<a href="javascript:void(0)" class="next">
+								<cms:svg file="site-sprite.svg" symbol="arrow"/>
+							</a>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -283,9 +286,9 @@
 					action="show"
 					text_id="quality"
 					template="parts/article_quality.xml"
-				/>
+					/>
 				<a href="#home">
-				<cms:svg file="site-sprite.svg" symbol="arrow" class="arrow" />
+					<cms:svg file="site-sprite.svg" symbol="arrow" class="arrow" />
 				</a>
 			</section>
 			<footer>

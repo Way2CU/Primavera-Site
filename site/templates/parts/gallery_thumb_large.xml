@@ -1,18 +1,18 @@
 <document>
 	<cms:desktop>
 		<div class="thumb_large">
-			<img 
-			src="gallery::getThumbnailById($params['id'], null, 500, Thumbnail::CONSTRAIN_BOTH)" 
-			alt="$params['title'][$language]"
-			cms:eval="src,alt"
-			/>
+			<img
+				src="gallery::getThumbnailById($params['id'], null, 500, Thumbnail::CONSTRAIN_BOTH)"
+				alt="$params['title'][$language]"
+				cms:eval="src,alt"
+				/>
 			<cms:markdown param="description" multilanguage="yes" />
-		</div>	
+		</div>
 	</cms:desktop>
 	<cms:mobile>
 		<cms:markdown param="description" multilanguage="yes" />
-			<img 
-			src="gallery::getThumbnailById($params['id'], null, 250, Thumbnail::CONSTRAIN_BOTH)" 
+		<img
+			src="gallery::getThumbnailById($params['id'], null, 250, Thumbnail::CONSTRAIN_BOTH)"
 			alt="$params['title'][$language]"
 			cms:eval="src,alt"
 			/>
