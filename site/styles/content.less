@@ -39,7 +39,7 @@
 }
 
 /*
-*Lobby Producg gallery
+*Lobby Product gallery
 */
 
 .home section#product_gallery {
@@ -65,7 +65,6 @@
 	margin: 0 auto;
 }
 
-.home section#product_gallery a span,
 .home section#product_gallery a p,
 .home section#product_gallery a h4 {
 	margin: 0 auto;
@@ -513,12 +512,6 @@ section#product ul li p {
 *Section Product Shot
 */
 
-body.hemorrhoids section#product_shot,
-body.fungus section#product_shot,
-body.psoriasis section#product_shot,
-body.cholesterol section#product_shot,
-body.arthritic section#product_shot,
-body.constipation section#product_shot,
 section#product_shot {
 	background-image: url(../images/riodontal.jpg);
 	background-position: center center;
@@ -1059,7 +1052,7 @@ Dialog Box
 
 div.dialog div.title {
 	text-align: center;
-	background-color: green;
+	background-color: @color_grey_dark;
 	color: white;
 }
 
@@ -1072,18 +1065,21 @@ div.content div.inner_content {
 
 div.content div.inner_content a {
 	text-decoration: none;
-	color: green;
+	color: @color_grey_dark;
 }
 
 div.dialog div.command_bar a.close {
 	padding-left: 2em;
 	padding-right: 2em;
-	background-color: lighten(green, 10%);
-	color: white;
+	background-color: @color_grey_light;
+	color: @color_grey_dark;
+	border: 1px solid @color_grey_dark;
 }
 
 div.dialog div.command_bar a.close:hover {
-	background-color: green;
+	background-color: @color_grey;
+	color: @color_red;
+	border: 1px solid @color_red;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {

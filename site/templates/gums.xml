@@ -9,7 +9,7 @@
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
-		<body>
+		<body class="gums">
 			<header id="home">
 				<cms:desktop>
 					<cms:module
@@ -74,29 +74,19 @@
 							/>
 						</div>
 					</div>
-				<nav class="mobile_menu">
-					<cms:desktop>
-						<cms:module
-							name="links"
-							action="show_link_list"
-							group="nav"
-							template="parts/links_nav_list.xml"
-						/>
-					</cms:desktop>
-					<cms:mobile>
-						<cms:module
-							name="links"
-							action="show_link_list"
-							group="nav_mobile"
-							template="parts/links_nav_list.xml"
-						/>
-					</cms:mobile>
-				</nav>
+					<nav class="mobile_menu">
+							<cms:module
+								name="links"
+								action="show_link_list"
+								group="nav_mobile"
+								template="parts/links_nav_list.xml"
+							/>
+					</nav>
 				</cms:mobile>
 			</header>
 			<!-- Section about -->
 			<cms:if condition="$action == 'alternative'">
-					<section id="about" class="$action == 'alternative' ? 'horizontal' : null" cms:optional="class">
+					<section class="horizontal" id="about">
 						<cms:module
 							name="articles"
 							action="show"
