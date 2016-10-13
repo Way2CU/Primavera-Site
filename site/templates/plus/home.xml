@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
 	<cms:var name="_DOCTYPE"/>
-	<html lang="$language" cms:eval="lang">
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title><cms:text constant="site_title"/></title>
-			<meta
-				http-equiv="refresh"
-				content="'5; url='.URL::make(array(), 'plus/home.xml')"
-				cms:eval="content"
-				/>
+			<cms:collection  include="page_control"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
-		<body class="home" id="top">
+		<body class="$section" cms:eval="class" id="top">
 			<header id="home">
 				<cms:desktop>
 					<cms:module
@@ -112,20 +108,30 @@
 							/>
 						</div>
 					</div>
-					<nav class="mobile_menu">
-							<a href="#experts">
-								<cms:text constant="about_us_lobby"/>
-							</a>
-							<a href="#product_gallery">
-								<cms:text constant="the_products"/>
-							</a>
-							<a href="#about">
-								<cms:text constant="contact_us_lobby"/>
-							</a>
-							<a href="#services">
-								<cms:text constant="our_services"/>
-							</a>
-					</nav>
+				<nav class="mobile_menu">
+					<cms:desktop>
+						<cms:module
+							name="links"
+							action="show_link_list"
+							group="nav"
+							template="parts/links_nav_list.xml"
+						/>
+					</cms:desktop>
+					<cms:mobile>
+						<a href="#experts">
+							<cms:text constant="about_us_lobby"/>
+						</a>
+						<a href="#product_gallery">
+							<cms:text constant="the_products"/>
+						</a>
+						<a href="#about">
+							<cms:text constant="contact_us_lobby"/>
+						</a>
+						<a href="#services">
+							<cms:text constant="our_services"/>
+						</a>
+					</cms:mobile>
+				</nav>
 				</cms:mobile>
 			</header>
 
