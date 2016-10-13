@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../../units/schema/language.dtd">
+<document>
+	<cms:var name="_DOCTYPE"/>
+	<html lang="$language" cms:eval="lang">
+		<head>
+			<title><cms:text constant="site_title"/></title>
+			<meta
+				http-equiv="refresh"
+				content="'5; url='.URL::make(array(), 'plus/home.xml')"
+				cms:eval="content"
+				/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body>
+		</body>
+	</html>
+</document>
