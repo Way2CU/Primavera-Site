@@ -43,7 +43,7 @@
 							template="parts/links_nav_list.xml"
 							/>
 					</nav>
-					<a href="url_Make(' ', 'home')" cms:eval="href">
+					<a href="URL::make(array(), 'plus/home.xml')" cms:eval="href">
 						<img
 							src="_BASEURL.'/site/images/logo.svg'"
 							alt="primavera_plus"
@@ -57,7 +57,7 @@
 						<a href="javascript:void(0)" class="menu">
 							<span></span>
 						</a>
-						<a href="url_Make(' ', 'home')" cms:eval="href">
+						<a href="URL::make(array(), 'plus/home.xml')" cms:eval="href">
 							<img
 								src="_BASEURL.'/site/images/logo.svg'"
 								alt="primavera_plus"

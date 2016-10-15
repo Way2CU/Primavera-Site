@@ -1,6 +1,6 @@
 <document>
 		<a
-			href="url_Make('', $params['text_id'])"
+			href="URL::make(array(), 'pluse/'.$params['text_id'].'.xml'.'.xml')"
 			cms:eval="href"
 			>
 			<img

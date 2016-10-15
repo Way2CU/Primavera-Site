@@ -43,7 +43,7 @@
 							template="parts/links_nav_list.xml"
 							/>
 					</nav>
-					<a href="url_Make(' ', 'home')" cms:eval="href">
+					<a href="URL::make(array(), 'plus/home.xml')" cms:eval="href">
 						<img
 							src="_BASEURL.'/site/images/logo.svg'"
 							alt="primavera_plus"
@@ -58,7 +58,7 @@
 						<a href="javascript:void(0)" class="menu">
 							<span></span>
 						</a>
-						<a href="url_Make(' ', 'home')" cms:eval="href">
+						<a href="URL::make(array(), 'plus/home.xml')" cms:eval="href">
 							<img
 								src="_BASEURL.'/site/images/logo.svg'"
 								alt="primavera_plus"
@@ -88,7 +88,7 @@
 
 			<!-- Section about -->
 			<cms:if condition="isset($_REQUEST['alternative'])">
-				<section id="about" class="$action == 'alternative' ? 'horizontal' : null" cms:optional="class">
+				<section id="about" class="horizontal">
 					<cms:module
 						name="articles"
 						action="show"
