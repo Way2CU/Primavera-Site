@@ -48,7 +48,7 @@
 									<a href="URL::make(array(), 'plus/constipation.xml')" cms:eval="href"><cms:text constant="aperta"/></a>
 								</li>
 								<li>
-									<a href="URL::make(array(),'plus/arthritic.xml')" cms:eval="href"><cms:text constant="preho"/></a>
+									<a href="URL::make(array(), 'plus/arthritic.xml')" cms:eval="href"><cms:text constant="preho"/></a>
 								</li>
 								<li>
 									<a href="URL::make(array(), 'plus/cholesterol.xml')" cms:eval="href"><cms:text constant="triger"/></a>
