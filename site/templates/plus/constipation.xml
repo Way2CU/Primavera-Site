@@ -9,7 +9,7 @@
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 
-		<body class="cholesterol">
+		<body class="constipation">
 			<header id="home">
 				<cms:desktop>
 					<cms:module
