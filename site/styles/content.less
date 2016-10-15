@@ -100,6 +100,10 @@
 	background-color: @color_red;
 	color: white;
 	border-color: white;
+	transform: scale(1.1);
+	box-shadow:  -2px 14px 17px -5px @color_grey_dark;
+	-moz-box-shadow: -2px 14px 17px -5px @color_grey_dark;
+	-webkit-box-shadow: -2px 14px 17px -5px @color_grey_dark;
 }
 
 /*
@@ -307,6 +311,11 @@ section#about.horizontal {
 	background-image: url(../images/header_background.jpg);
 	background-position: 50% center;
 	padding: 19px calc(~'(100% - 960px)' / 2);
+}
+
+.cholesterol section#about.horizontal,
+.arthritic section#about.horizontal {
+	padding: 16px calc(~'(100% - 960px)' / 2);
 }
 
 section#about.horizontal article {
@@ -661,6 +670,9 @@ body.hemorrhoids section#details ul li {
 	width: 80%;
 }
 
+body.cholesterol section#details ul li {
+	width: 85%;
+}
 
 
 section#details ul li:after {
@@ -713,15 +725,14 @@ body.psoriasis section#details div.bone_picture {
 	width: 250px;
 	height: 250px;
 	top: 55%;
-	right: calc(~'50% + 60px');
-
+	right: calc(~'50% + 75px');
 }
 
 body.cholesterol section#details div.bone_picture {
 	width: 200px;
 	height: 200px;
-	top: 56%;
-	right: calc(~'50% + 113px');
+	top: 54%;
+	right: calc(~'50% + 200px');
 
 }
 
