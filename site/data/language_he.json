@@ -27,7 +27,12 @@
 	"periodontal" : "<strong>סדרת Periodontal</strong><br>לטיפול בחניכיים",
 	"xagaris" : "<strong>סדרת Xagaris</strong><br>לטיפול בפטריה",
 	"relipso" : "<strong>סדרת Relipso</strong><br>לטיפול בפסוריאזיס",
-	"soluroids" : "<strong>סדרת Soluroids</strong><br>לטיפול בטחורים"
-
-
+	"soluroids" : "<strong>סדרת Soluroids</strong><br>לטיפול בטחורים",
+	"title_preho" : "Preho",
+	"title_triger" : "Triger",
+	"title_aperta" : "Aperta",
+	"title_xagaris" : "Xagaris",
+	"title_periodontal" : "Periodontal",
+	"title_soluroids" : "Soluroids",
+	"title_relipso" : "Relipso"
 }
