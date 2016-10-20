@@ -1,0 +1,27 @@
+<document>
+	<img
+	src="_BASEURL.'/site/images/iso.jpg'"
+	alt="iso 22000:2005"
+	cms:eval="src"
+	/>
+	<img
+	src="_BASEURL.'/site/images/hac.jpg'"
+	alt="haccp iqc"
+	cms:eval="src"
+	/>
+	<img
+	src="_BASEURL.'/site/images/gmp.jpg'"
+	alt="gmp"
+	cms:eval="src"
+	/>
+	<img
+	src="_BASEURL.'/site/images/gmp2.jpg'"
+	alt="gmp consult"
+	cms:eval="src"
+	/>
+	<img
+	src="_BASEURL.'/site/images/privacy.jpg'"
+	alt="privacy icon"
+	cms:eval="src"
+	/>
+</document>
