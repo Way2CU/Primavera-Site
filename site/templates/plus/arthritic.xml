@@ -223,57 +223,10 @@
 					</ul>
 				</cms:mobile>
 			</section>
-			<section id="information">
-				<div id="tabs">
-					<a href="javascript:void(0)">
-						<cms:svg file="site-sprite.svg" symbol="experts"/>
-						<cms:text constant="experts"/>
-					</a>
-					<a href="javascript:void(0)">
-						<cms:svg file="site-sprite.svg" symbol="service"/>
-						<cms:text constant="customers"/>
-					</a>
-					<a href="javascript:void(0)">
-						<cms:svg file="site-sprite.svg" symbol="like"/>
-						<cms:text constant="clients"/>
-					</a>
-				</div>
-				<div class="content">
-					<cms:module
-						name="articles"
-						action="show_list"
-						group="experts"
-						template="stock/article_generic.xml"
-						/>
-				</div>
-				<div class="content">
-					<cms:module
-						name="articles"
-						action="show_list"
-						group="services"
-						template="stock/article_generic.xml"
-						/>
-				</div>
-				<div class="content">
-					<div class="testemonials">
-						<cms:module
-							name="articles"
-							action="show_list"
-							group="testemonials_arthritic"
-							template="parts/testemonials.xml"
-							/>
-						<div id="control_container">
-							<a href="javascript:void(0)" class="prev">
-								<cms:svg file="site-sprite.svg" symbol="arrow"/>
-							</a>
-							<div class="control_panel"></div>
-							<a href="javascript:void(0)" class="next">
-								<cms:svg file="site-sprite.svg" symbol="arrow"/>
-							</a>
-						</div>
-					</div>
-				</div>
-			</section>
+
+			<!-- Section Information -->
+			<cms:template file="parts/section_information.xml"/>
+
 			<section id="quality">
 				<cms:module
 					name="articles"
