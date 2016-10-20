@@ -227,6 +227,7 @@
 			<!-- Section Information -->
 			<cms:template file="parts/section_information.xml"/>
 
+			<!-- Section quality -->
 			<section id="quality">
 				<cms:module
 					name="articles"
