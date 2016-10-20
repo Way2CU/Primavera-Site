@@ -232,6 +232,9 @@
 					text_id="quality"
 					template="parts/article_quality.xml"
 					/>
+
+				<cms:template file="parts/section_quality_icons.xml"/>
+
 				<a href="#home">
 					<cms:svg file="site-sprite.svg" symbol="arrow" class="arrow" />
 				</a>

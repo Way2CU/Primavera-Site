@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
@@ -233,6 +232,9 @@
 					text_id="quality"
 					template="parts/article_quality.xml"
 					/>
+
+				<cms:template file="parts/section_quality_icons.xml"/>
+
 				<a href="#home">
 					<cms:svg file="site-sprite.svg" symbol="arrow" class="arrow" />
 				</a>
