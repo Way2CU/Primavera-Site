@@ -10,7 +10,12 @@ header {
 	background-color: @color_grey_light;
 	box-sizing: border-box;
 	padding: 0px calc(~'(100% - 960px)' / 2);
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	border-bottom: 1px solid fade(@color_grey_dark, 20%);
 }
 
 header > a.phone {
