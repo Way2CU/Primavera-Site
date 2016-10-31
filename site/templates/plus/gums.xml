@@ -105,7 +105,9 @@
 							name="contact_form"
 							action="show"
 							text_id="contact_form"
-							/>
+							>
+						<param name="service" value="gums"/>
+						</cms:module>
 					</div>
 				</section>
 			</cms:if>
@@ -131,7 +133,9 @@
 							name="contact_form"
 							action="show"
 							text_id="contact_form"
-							/>
+							>
+						<param name="service" value="gums"/>
+						</cms:module>
 					</div>
 				</section>
 			</cms:if>
