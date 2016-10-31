@@ -169,6 +169,15 @@
 							template="parts/gallery_lobby.xml"
 						/>
 			</section>
+			<section id="about_plus">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about_plus"
+					template="stock/article_generic.xml"
+					/>
+			</section>
+
 
 			<section id="experts">
 				<cms:module
