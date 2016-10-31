@@ -170,12 +170,28 @@
 						/>
 			</section>
 			<section id="about_plus">
+			<cms:desktop>
 				<cms:module
 					name="articles"
 					action="show"
 					text_id="about_plus"
 					template="stock/article_generic.xml"
 					/>
+			</cms:desktop>
+			<cms:mobile>
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="about_plus"
+					template="stock/article_generic.xml"
+					/>
+				   	<img
+						src="_BASEURL.'/site/images/about_plus.jpg'"
+						alt="plus"
+						cms:eval="src"
+						class="about_us"
+					/>
+			</cms:mobile>
 			</section>
 
 
