@@ -863,8 +863,19 @@ section#information div.content:nth-of-type(4) {
 	background-image: url(../images/testimonials_bg.jpg);
 }
 
-section#information div.content article {
+section#information div.content > article {
 	width: 480px;
+	box-sizing: border-box;
+	padding: 1em;
+	border-radius: 10px;
+	border: @color_grey solid 3px;
+	background-color: lighten(@color_grey_dark, 10%);
+	margin-top: 1.3em;
+	margin-right: 0.5em;
+}
+
+section#information div.content > article p {
+	margin: 0;
 }
 
 section#information div.content.visible {
