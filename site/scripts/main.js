@@ -106,7 +106,7 @@ Site.on_load = function() {
 
 	//Scroll Y function
 	$("a#scroll_button").on("click", function(event){
-		windown.scrollTo(0, 0);
+		window.scrollTo(0, 0);
 	});
 };
 
