@@ -58,6 +58,8 @@
 	min-height: 300px;
 	text-decoration: none;
 	transition: all 0.3s;
+	position: relative;
+	top: 0;
 }
 
 .home section#product_gallery a img {
@@ -90,10 +92,12 @@
 	padding: 0.5em 1em;
 	border: 1px solid @color_grey_dark;
 	background-color: lighten(@color_grey, 15%);
+	transition: all 0.3s;
 }
 
 .home section#product_gallery a:hover {
-	transform: scale(1.1);
+	top: -10px;
+	box-shadow: 0px 13px 14px -7px fade(@color_grey, 50%);
 }
 
 .home section#product_gallery a:hover span {
@@ -101,9 +105,6 @@
 	color: white;
 	border-color: white;
 	transform: scale(1.1);
-	box-shadow:  0px 14px 12px -9px @color_grey_dark;
-	-moz-box-shadow: 0px 14px 12px -9px @color_grey_dark;
-	-webkit-box-shadow: 0px 14px 12px -9px @color_grey_dark;
 }
 
 /*
@@ -111,15 +112,19 @@
 */
 
 .home section#about_plus {
-	margin: 0 calc(~'(100% - 1200px)' / 2);
+	padding: 0 calc(~'(100% - 1200px)' / 2);
 	background-image: url(../images/about_plus.jpg);
 	background-size: 470px 681px;
-	background-position: left;
+	background-position: calc(~'50% - 430px') center;
 	background-repeat: no-repeat;
 }
 
 .home section#about_plus article {
-	width: 65%;
+	width: 50%;
+}
+
+.home section#about_plus article p {
+	font-size: 1.3rem;
 }
 
 /*
