@@ -242,7 +242,7 @@
 
 				<cms:template file="parts/section_quality_icons.xml"/>
 
-				<a href="#home">
+				<a href="#" id="scroll_button">
 					<cms:svg file="site-sprite.svg" symbol="arrow" class="arrow" />
 				</a>
 			</section>

@@ -220,7 +220,7 @@
 					text_id="quality"
 					template="parts/article_quality.xml"
 				/>
-				<a href="#top">
+				<a href="#" id="scroll_button">
 				<cms:svg file="site-sprite.svg" symbol="arrow" class="arrow" />
 				</a>
 			</section>
