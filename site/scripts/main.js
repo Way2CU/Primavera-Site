@@ -103,6 +103,11 @@ Site.on_load = function() {
 		Site.dialog.show();
 		console.log("Eat my ass");
 	});
+
+	//Scroll Y function
+	$("a#scroll_button").on("click", function(event){
+		windown.scrollTo(0, 0);
+	});
 };
 
 
