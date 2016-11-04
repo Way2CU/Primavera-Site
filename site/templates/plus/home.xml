@@ -10,6 +10,11 @@
 		</head>
 
 		<body class="home" id="top">
+
+			<a href="" class="floating_clicker">
+			<!-- 	<cms:svg file="floating_logo.svg" /> -->
+			</a>
+
 			<header id="home">
 				<cms:desktop>
 					<cms:module
@@ -241,6 +246,12 @@
 					</cms:template>
 				</cms:mobile>
 			</footer>
-		</body>
+			<div id="floating_form">
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="contact_form"
+				/>
+			</div>
 	</html>
 </document>
