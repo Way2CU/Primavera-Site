@@ -6,6 +6,25 @@
  * Authors:Iliya Melishev
  */
 
+
+/*
+*Floating clicker button
+*/
+
+body a.floating_clicker {
+	position: fixed;
+	top: 55%;
+	left: 0;
+	width: 50px;
+	height: 140px;
+	background-color: @color_red;
+	z-index: 1000000;
+	background-image: url(../images/floating_logo.svg);
+	background-position: center;
+	background-size: 100px 100px;
+	background-repeat: no-repeat;
+}
+
 /*
 *Lobby #about
 */
@@ -234,18 +253,23 @@ section#about div h2 {
 	line-height: 100%;
 }
 
+//Grouping style with floating form
+
+#floating_form form label,
 section#about div form label {
 	display: block;
 	width: 100%;
 	padding-bottom: 0.5em;
 }
 
+#floating_form form label:nth-of-type(2),
 section#about div form label:nth-of-type(2) {
 	display: inline-block;
 	vertical-align: middle;
 	width: 72%;
 }
 
+#floating_form:nth-of-type(3),
 section#about div form label:nth-of-type(3) {
 	display: inline-block;
 	vertical-align: middle;
@@ -253,6 +277,7 @@ section#about div form label:nth-of-type(3) {
 	margin-right: 0.4em;
 }
 
+#floating_form form label select,
 section#about div form label select {
 	padding: 0.5em;
 	border: 1px solid @color_grey;
@@ -265,11 +290,14 @@ section#about div form label select {
 	margin: 0;
 }
 
+
+#floating_form form label span,
 section#about div form label span {
 	display: block;
 	padding-bottom: 0.2em;
 }
 
+#floating_form form label input,
 section#about div form label input {
 	padding: 0.5em;
 	display: block;
@@ -1082,6 +1110,17 @@ section#quality article p {
 	font-size: 1.3em;
 }
 
+section#quality article p a {
+	background-color: #5b7233;
+	color: white;
+	width: 19%;
+	display: block;
+	margin: 0 auto;
+	border-radius: 20px;
+	padding: 0.5em;
+	text-decoration: none;
+}
+
 section#quality svg.arrow {
 	width: 30px;
 	height: 45px;
@@ -1106,7 +1145,7 @@ Dialog Box
 
 div.dialog div.title {
 	text-align: center;
-	background-color: @color_grey_dark;
+	background-color: green;
 	color: white;
 }
 
@@ -1119,21 +1158,20 @@ div.content div.inner_content {
 
 div.content div.inner_content a {
 	text-decoration: none;
-	color: @color_grey_dark;
+	color: @color_red;
 }
 
 div.dialog div.command_bar a.close {
 	padding-left: 2em;
 	padding-right: 2em;
-	background-color: @color_grey_light;
-	color: @color_grey_dark;
-	border: 1px solid @color_grey_dark;
+	background-color: lighten(green, 10%);
+	color: white;
+	border: 1px solid white;
 }
 
 div.dialog div.command_bar a.close:hover {
-	background-color: @color_grey;
-	color: @color_red;
-	border: 1px solid @color_red;
+	background-color: green;
+	border: 1px solid white;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
