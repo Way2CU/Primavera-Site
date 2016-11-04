@@ -56,6 +56,7 @@ Site.is_mobile = function() {
 		Site.dialog.setSize(300, 280);
 	};
 
+
 /**
  * Function called when document and images have been completely loaded.
  */
@@ -96,13 +97,25 @@ Site.on_load = function() {
     	Site.dialog = new Dialog();
 	language_handler.getTextArrayAsync(null, ['whatsapp_message', 'dialog_title'], Site.handle_language_load);
 
+	//Dialog Form
+	Site.dialog_form = new Dialog();
+		Site.dialog_form
+			.addClass('form')
+			.setContentFromDOM('div#floating_form');
+
 
 	//Whatsapp Click Handler
 	$("a.whatsapp").on("click", function(event){
 		event.preventDefault();
 		Site.dialog.show();
-		console.log("Eat my ass");
 	});
+
+	//Floating clicker on click dialog show
+	$('a.floating_clicker').on("click", function(event){
+		event.preventDefault();
+		Site.dialog_form.show();
+	});
+
 };
 
 
