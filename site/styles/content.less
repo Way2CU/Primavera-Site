@@ -1104,8 +1104,25 @@ section#quality article h2 {
 	padding-bottom: 0.5em;
 }
 
+section#quality article img {
+	display: block;
+	margin: 0 auto;
+}
+
+section#quality article a {
+	display: block;
+	margin: 0.5em auto;
+	width: 13%;
+	background-color: #008001;
+	color: white;
+	border-radius: 10px;
+	padding: 0.5em;
+	text-decoration: none;
+}
+
 section#quality article p {
 	font-size: 1.3em;
+	margin-top: 0;
 }
 
 section#quality article p a {
@@ -1181,6 +1198,10 @@ div.dialog.form.visible {
 
 div.dialog.form.visible div.content div.inner_content {
 	font-size: 1.2rem;
+}
+
+div.dialog.form.visible div.content div.command_bar a {
+	background-color: darken(@color_red, 10%);
 }
 
 div.dialog.form.visible div.title {
