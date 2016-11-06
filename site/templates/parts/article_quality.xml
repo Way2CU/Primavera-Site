@@ -6,6 +6,11 @@
 			alt="ttm"
 			cms:eval="src"
 			/>
+
+		<a href="#top">
+			<cms:text constant="3_stages"/>
+		</a>
+
 		<cms:markdown param="content" multilanguage="yes"/>
 	</article>
 </document>
