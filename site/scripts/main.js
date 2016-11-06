@@ -116,6 +116,12 @@ Site.on_load = function() {
 		Site.dialog_form.show();
 	});
 
+	// create handler for submitting dialog form
+	Caracal.ContactForm.list[1].events.connect('submit-success', function(event) {
+		Site.dialog_form.hide();
+		return true;
+	});
+
 };
 
 
