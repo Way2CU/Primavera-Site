@@ -247,6 +247,7 @@
 				</cms:mobile>
 			</footer>
 			<div id="floating_form">
+				<h2><cms:text constant="contact"/></h2>
 				<cms:module
 					name="contact_form"
 					action="show"

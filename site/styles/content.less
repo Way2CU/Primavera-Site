@@ -253,23 +253,22 @@ section#about div h2 {
 	line-height: 100%;
 }
 
-//Grouping style with floating form
+/*
+*Form
+*/
 
-#floating_form form label,
 section#about div form label {
 	display: block;
 	width: 100%;
 	padding-bottom: 0.5em;
 }
 
-#floating_form form label:nth-of-type(2),
 section#about div form label:nth-of-type(2) {
 	display: inline-block;
 	vertical-align: middle;
 	width: 72%;
 }
 
-#floating_form:nth-of-type(3),
 section#about div form label:nth-of-type(3) {
 	display: inline-block;
 	vertical-align: middle;
@@ -277,7 +276,6 @@ section#about div form label:nth-of-type(3) {
 	margin-right: 0.4em;
 }
 
-#floating_form form label select,
 section#about div form label select {
 	padding: 0.5em;
 	border: 1px solid @color_grey;
@@ -290,14 +288,11 @@ section#about div form label select {
 	margin: 0;
 }
 
-
-#floating_form form label span,
 section#about div form label span {
 	display: block;
 	padding-bottom: 0.2em;
 }
 
-#floating_form form label input,
 section#about div form label input {
 	padding: 0.5em;
 	display: block;
@@ -335,12 +330,15 @@ section#about div form label.checkbox span {
 	width: 92%;
 }
 
+//Floating form grouping
+#floating_form form div.controls,
 section#about div form div.controls {
 	display: block;
 	text-align: center;
 	width: 100%;
 }
 
+#floating_form form div.controls button,
 section#about div form div.controls button {
 	background-color: @color_red;
 	border: 1px solid transparent;
@@ -1172,6 +1170,106 @@ div.dialog div.command_bar a.close {
 div.dialog div.command_bar a.close:hover {
 	background-color: green;
 	border: 1px solid white;
+}
+
+/*
+*Floating Form Style
+*/
+div.dialog.form.visible {
+	top: 25%;
+}
+
+div.dialog.form.visible div.content div.inner_content {
+	font-size: 1.2rem;
+}
+
+div.dialog.form.visible div.title {
+	display: none;
+}
+
+#floating_form {
+	display: block;
+	width: 100%;
+	text-align: right;
+	font-size: 1.2rem;
+}
+
+#floating_form h2 {
+	font-size: 1.5rem;
+	color: @color_red;
+	text-align: center;
+}
+
+#floating_form form {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#floating_form form label {
+	display: block;
+	width: 100%;
+	padding-bottom: 0.5em;
+	font-size: 1em;
+}
+
+//phone
+#floating_form form label:nth-of-type(2) {
+	display: inline-block;
+	width: 80%;
+	vertical-align: middle;
+}
+
+#floating_form form label:nth-of-type(2) input {
+	display: block;
+	width: 90%;
+}
+
+//zipcode
+#floating_form form label:nth-of-type(3) {
+	display: inline-block;
+	width: 20%;
+	vertical-align: middle;
+}
+
+#floating_form form label:nth-child(4) select {
+	padding: 0.5em 0;	
+}
+
+#floating_form form label span {
+	display: block;
+	width: 100%;
+	font-size: 1.2rem;
+}
+
+#floating_form form label input {
+	display: block;
+	width: 100%;
+	font-size: 1.2rem;
+	padding: 0.5em;
+	box-sizing: border-box;
+}
+
+#floating_form form label.checkbox {
+	display: block;
+	width: 100%;
+}
+
+#floating_form form label.checkbox input {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+}
+
+#floating_form form label.checkbox span {
+	display: inline-block;
+	vertical-align: middle;
+	width: calc(~'100% - 30px');
+}
+
+#floating_form form div.controls button {
+	font-size: 1.5rem;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
