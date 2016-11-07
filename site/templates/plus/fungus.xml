@@ -14,6 +14,11 @@
 		</head>
 
 		<body class="fungus">
+
+		<!-- Floating clicker button for dialog form -->
+			<a href="" class="floating_clicker">
+			</a>
+			
 			<header id="home">
 				<cms:desktop>
 					<cms:module
@@ -259,6 +264,7 @@
 					</cms:template>
 				</cms:mobile>
 			</footer>
+			<cms:template file="parts/floating_form.xml"/>
 		</body>
 	</html>
 </document>
