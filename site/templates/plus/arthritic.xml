@@ -234,7 +234,9 @@
 			</section>
 
 			<!-- Section Information -->
-			<cms:template file="parts/section_information.xml"/>
+			<cms:template file="parts/section_information.xml">
+				<param name="product" value="arthritic"/>
+			</cms:template>
 
 			<!-- Section quality -->
 			<section id="quality">

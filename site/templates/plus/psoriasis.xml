@@ -19,7 +19,7 @@
 			<a href="" class="floating_clicker">
 			</a>
 
-			
+
 			<header id="home">
 				<cms:desktop>
 					<cms:module
@@ -233,7 +233,9 @@
 			</section>
 
 			<!-- Section Information -->
-			<cms:template file="parts/section_information.xml"/>
+			<cms:template file="parts/section_information.xml">
+				<param name="product" value="psoriasis"/>
+			</cms:template>
 
 			<section id="quality">
 				<cms:module

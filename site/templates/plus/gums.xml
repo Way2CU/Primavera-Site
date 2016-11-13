@@ -14,7 +14,7 @@
 		</head>
 
 		<body class="gums">
-			
+
 		<!-- Floating clicker button for dialog form -->
 			<a href="" class="floating_clicker">
 			</a>
@@ -232,7 +232,9 @@
 			</section>
 
 			<!-- Section Information -->
-			<cms:template file="parts/section_information.xml"/>
+			<cms:template file="parts/section_information.xml">
+				<param name="product" value="gums"/>
+			</cms:template>
 
 			<section id="quality">
 				<cms:module
