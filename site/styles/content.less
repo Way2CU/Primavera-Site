@@ -349,6 +349,12 @@ section#about div form div.controls button {
 	width: 65%;
 	height: 100%;
 	padding: 0.3em 0;
+	animation: button_flicker 0.5s linear infinite alternate;
+}
+
+@keyframes button_flicker {
+	from{background-color: lighten(@color_red, 10%);}
+	to{background-color:@color_red;}
 }
 
 section#about div form div.controls button:hover {
@@ -356,6 +362,7 @@ section#about div form div.controls button:hover {
 	box-shadow:  -2px 14px 17px -5px @color_grey_dark;
 	-moz-box-shadow: -2px 14px 17px -5px @color_grey_dark;
 	-webkit-box-shadow: -2px 14px 17px -5px @color_grey_dark;
+	animation: none;
 }
 
 section#about div form div.controls button:active {
@@ -1158,9 +1165,6 @@ section#quality > img {
 /*
 Dialog Box
 */
-div.dialog {
-	top: 150%;
-}
 
 div.dialog div.title {
 	text-align: center;
