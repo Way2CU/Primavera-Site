@@ -122,6 +122,13 @@ Site.on_load = function() {
 		return true;
 	});
 
+	Caracal.ContactForm.list.events.connect('submit-success', function(data) {
+		dataLayer.push({
+            event: "leadSent"
+        });
+		return true;
+	});
+
 };
 
 
