@@ -122,13 +122,16 @@ Site.on_load = function() {
 		return true;
 	});
 
-	Caracal.ContactForm.list.events.connect('submit-success', function(data) {
-		dataLayer.push({
-            event: "leadSent"
-        });
-		return true;
-	});
+	// connect submission to Google Analytics
+	var push_event = function(data) {
+			dataLayer.push({
+				event: "leadSent"
+			});
+			return true;
+		};
 
+	for (var index in Caracal.ContactForm.list)
+		Caracal.ContactForm.list[index].events.connect('submit-success', push_event);
 };
 
 
