@@ -5,6 +5,7 @@
 	<html lang="$language" cms:eval="lang">
 		<head>
 			<title><cms:text constant="site_title"/></title>
+			<cms:raw file="parts/gtmhead.txt"/>
 			<meta
 				http-equiv="refresh"
 				content="'1; url='.URL::make(array(), 'plus/home.xml')"
