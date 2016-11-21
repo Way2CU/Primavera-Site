@@ -14,7 +14,7 @@
 		</head>
 
 		<body class="gums">
-
+			<cms:raw file="parts/gtmbody.txt"/>
 		<!-- Floating clicker button for dialog form -->
 			<a href="" class="floating_clicker">
 			</a>

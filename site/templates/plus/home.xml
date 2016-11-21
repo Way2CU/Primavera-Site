@@ -10,7 +10,7 @@
 		</head>
 
 		<body class="home" id="top">
-
+			<cms:raw file="parts/gtmbody.txt"/>
 			<a href="" class="floating_clicker">
 			</a>
 
