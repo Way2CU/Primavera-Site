@@ -155,6 +155,11 @@ section#about div {
 	background-color: @color_grey_light;
 }
 
+section#about div h4 {
+	text-align: center;
+	padding-top: 1em;
+}
+
 section#about div h2 {
 	margin: 0;
 	color: @color_red;
@@ -566,6 +571,10 @@ section#quality {
 	text-align: center;
 }
 
+section#quality article {
+	position: relative;
+}
+
 section#quality article h2 {
 	margin: 0;
 	padding-bottom: 1em;
@@ -583,10 +592,23 @@ section#quality article p {
 	text-align: center;
 }
 
-section#quality a {
+section#quality article a {
+	text-decoration: none;
+	text-align: center;
+	background-color: #5b7233;
+	display: block;
+	width: 80%;
+	margin: 0.5em auto;
+	padding: 1em;
+	color: white;
+	border-radius: 15px;
+}
+
+section#quality > a {
+	display: block;
 	position: absolute;
-	top: 18%;
-	right: 2%;
+	top: 17%;
+	right: 1em;
 }
 
 section#quality a svg {
