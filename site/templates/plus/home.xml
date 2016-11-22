@@ -165,6 +165,16 @@
 							</div>
 					</section>
 
+					<!-- Section video -->
+					<section class="video">
+						<cms:module
+							name="youtube"
+							action="show"
+							text_id="lobby_video"
+							template="parts/youtube.xml"
+						/>
+					</section>
+
 			<section id="product_gallery">
 						<cms:module
 							name="gallery"

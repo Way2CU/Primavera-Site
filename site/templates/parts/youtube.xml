@@ -1,0 +1,26 @@
+<document>
+	<cms:desktop>
+		<cms:module
+			name="youtube"
+			action="show"
+			id="$params['id']"
+			embed="1"
+			width="960"
+			height="640"
+			enable_api="1"
+			cms:eval="id"
+			/>
+	</cms:desktop>
+	<cms:mobile>
+		<cms:module
+			name="youtube"
+			action="show"
+			id="$params['id']"
+			embed="1"
+			width="250"
+			height="166"
+			enable_api="1"
+			cms:eval="id"
+			/>
+	</cms:mobile>
+</document>

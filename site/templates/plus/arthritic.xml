@@ -146,7 +146,15 @@
 					</div>
 				</section>
 			</cms:if>
-
+			<!-- Section video -->
+			<section class="video">
+				<cms:module
+					name="youtube"
+					action="show"
+					text_id="arthritic_video"
+					template="parts/youtube.xml"
+				/>
+			</section>
 			<!-- Section product -->
 			<section id="product">
 				<cms:module
