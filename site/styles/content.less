@@ -53,7 +53,7 @@ body a.floating_clicker {
 }
 
 .home section#about article h1 {
-	color: black;
+	color: @color_grey;
 	font-size: 2em;
 }
 
@@ -214,16 +214,17 @@ section#about article {
 }
 
 section#about article h1 {
-	font-size: 2.5em;
-	color: @color_red;
+	padding-top: 1em;
+	color: @color_grey;
 	margin-top: 0;
 	margin-bottom: 0.5em;
 }
 
 section#about article h3 {
 	margin: 0;
-	font-size: 2em;
+	font-size: 1.5em;
 	padding-left: 1em;
+	font-weight: 400;
 }
 
 section#about article p {
@@ -233,7 +234,7 @@ section#about article p {
 section#about article p > strong {
 	margin: 0.5em;
 	display: inline-block;
-	font-size: 1.2em;
+	font-weight: 400;
 	margin-right: 0;
 }
 
@@ -371,22 +372,17 @@ section#about div form div.controls button:before {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 180px;
-	height: 45px;
-	animation: button_flicker 5s linear infinite;
+	width: 185px;
+	height: 50px;
+	animation: button_flicker 1s linear infinite;
 }
 
 @keyframes button_flicker {
-	0%{
+	from{
 		transform: scale(1) translate(-50%, -50%);
 		transform-origin: 0 0;
 	}
-	5%{
-		transform: scale(1.1) translate(-50%, -50%);
-		border-color:transparent;
-		transform-origin: 0 0;
-	}
-	100%{
+	to{
 		transform: scale(1.1) translate(-50%, -50%);
 		border-color:transparent;
 		transform-origin: 0 0;
