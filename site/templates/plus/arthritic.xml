@@ -96,7 +96,7 @@
 				</cms:mobile>
 			</header>
 
-			<!-- Section about -->
+			<!-- Section about alternative 1-->
 			<cms:if condition="isset($_REQUEST['alternative'])">
 				<section id="about" class="horizontal">
 					<cms:module
