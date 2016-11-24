@@ -53,7 +53,7 @@ body a.floating_clicker {
 }
 
 .home section#about article h1 {
-	color: @color_grey;
+	color: #58595B;
 	font-size: 2em;
 }
 
@@ -200,13 +200,14 @@ section#about {
 	background-repeat: no-repeat;
 	background-size: 1920px 500px;
 	background-position: 50% center;
-	padding: 50px calc(~'(100% - 960px)' / 2);
+	padding: 40px calc(~'(100% - 960px)' / 2);
 	position: relative;
+	color: #58595B;
 }
 
 section#about article {
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 	margin-right: calc(~'(50% - 240px)');
 	width: 45%;
 	box-sizing: border-box;
@@ -214,33 +215,34 @@ section#about article {
 }
 
 section#about article h1 {
-	padding-top: 1em;
 	color: @color_grey;
 	margin-top: 0;
 	margin-bottom: 0.5em;
+	font-weight: 300;
+	color: #58595B;
 }
 
 section#about article h3 {
 	margin: 0;
 	font-size: 1.5em;
 	padding-left: 1em;
-	font-weight: 400;
+	font-weight: 700;
 }
 
 section#about article p {
 	margin: 0;
+	font-weight: 700;
 }
 
 section#about article p > strong {
 	margin: 0.5em;
 	display: inline-block;
-	font-weight: 400;
 	margin-right: 0;
 }
 
-section#about div {
+section#about > div {
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 	width: calc(~'(100% - 672px)');
 }
 
@@ -408,6 +410,7 @@ section#about.horizontal {
 	background-image: url(../images/header_background.jpg);
 	background-position: 50% center;
 	padding: 19px calc(~'(100% - 960px)' / 2);
+	min-height: 500px;
 }
 
 
