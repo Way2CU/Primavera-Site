@@ -94,7 +94,7 @@ Site.on_load = function() {
 		.attachNextControl($('a.next'));
 
 	//Dialog js Whatsapp
-    	Site.dialog = new Dialog();
+	Site.dialog = new Dialog();
 	language_handler.getTextArrayAsync(null, ['whatsapp_message', 'dialog_title'], Site.handle_language_load);
 
 	//Dialog Form
@@ -112,6 +112,12 @@ Site.on_load = function() {
 
 	//Floating clicker on click dialog show
 	$('a.floating_clicker').on("click", function(event){
+		event.preventDefault();
+		Site.dialog_form.show();
+	});
+
+	//Section about alternative version 3 button click dialog show
+	$('a#button_green_action').on("click", function(event){
 		event.preventDefault();
 		Site.dialog_form.show();
 	});

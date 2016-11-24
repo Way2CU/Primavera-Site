@@ -401,7 +401,7 @@ section#about div form div.controls button:active {
 	background-color: darken(@color_red, 10%);
 }
 
-/*Form Horizonal */
+/*Form Horizonal & Green version*/
 
 section#about.horizontal {
 	padding: 50px 0;
@@ -410,9 +410,19 @@ section#about.horizontal {
 	padding: 19px calc(~'(100% - 960px)' / 2);
 }
 
+
 .cholesterol section#about.horizontal,
 .arthritic section#about.horizontal {
 	padding: 16px calc(~'(100% - 960px)' / 2);
+}
+
+section#about.horizontal.green {
+	background-image: url(../images/header_background_green.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 1920px 700px;
+	min-height: 700px;
+	padding: 0px calc(~'(100% - 960px)' / 2 );
 }
 
 section#about.horizontal article {
@@ -420,6 +430,30 @@ section#about.horizontal article {
 	margin: 0;
 	padding: 0;
 	width: 80%;
+}
+
+section#about.horizontal.green article  {
+	padding-top: 10%;
+	padding-bottom: 1em;
+}
+
+section#about.horizontal.green article  h1 {
+	color: green;
+}
+
+section#about.horizontal.green a {
+	text-decoration: none;
+	color: white;
+	background-color: green;
+	border-radius: 5px;
+	padding: 1em;
+	font-weight: 700;
+	border: 1px solid @color_grey;
+	transition: all 0.3s;
+}
+
+section#about.horizontal.green a:hover {
+	background-color: lighten(green, 10%);
 }
 
 section#about.horizontal article p {

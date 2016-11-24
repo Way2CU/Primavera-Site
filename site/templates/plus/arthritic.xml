@@ -96,57 +96,76 @@
 				</cms:mobile>
 			</header>
 
-			<!-- Section about alternative 1-->
-			<cms:if condition="isset($_REQUEST['alternative'])">
-				<section id="about" class="horizontal">
-					<cms:module
-						name="articles"
-						action="show"
-						text_id="treatment_arthritic_alternative"
-						template="parts/article.xml"
-						/>
-					<div>
-						<h4><cms:text constant="alternative_title_form"/></h4>
-						<h2><cms:text constant="contact"/></h2>
+			<!-- Alternative vestions structure -->
+			<!-- Horizontal version -->
+			<cms:choice param="alternative">
+				<option value="one">
+					<section id="about" class="horizontal">
 						<cms:module
-							name="contact_form"
+							name="articles"
 							action="show"
-							text_id="contact_form"
-							>
-							<transfer name="service" value="arthritic"/>
-						</cms:module>
-					</div>
-				</section>
-			</cms:if>
-
-			<cms:if condition="!isset($_REQUEST['alternative'])">
-				<section id="about">
-					<cms:module
-						name="articles"
-						action="show"
-						text_id="treatment_arthritic"
-						template="parts/article.xml"
-						/>
-					<cms:mobile>
-						<img
-							src="_BASEURL.'/site/images/mobile_background.jpg'"
-							alt="background_mobile"
-							cms:eval="src"
-							class="background"
+							text_id="treatment_arthritic_alternative"
+							template="parts/article.xml"
 							/>
-					</cms:mobile>
-					<div>
-						<h2><cms:text constant="contact"/></h2>
+						<div>
+							<h4><cms:text constant="alternative_title_form"/></h4>
+							<h2><cms:text constant="contact"/></h2>
+							<cms:module
+								name="contact_form"
+								action="show"
+								text_id="contact_form"
+								>
+								<transfer name="service" value="arthritic"/>
+							</cms:module>
+						</div>
+					</section>
+				</option>
+
+				<!-- Green version -->
+				<option value="two">
+					<section id="about" class="horizontal green">
 						<cms:module
-							name="contact_form"
+							name="articles"
 							action="show"
-							text_id="contact_form"
-							>
-						<transfer name="service" value="arthritic"/>
-						</cms:module>
-					</div>
-				</section>
-			</cms:if>
+							text_id="treatment_arthritic_alternative"
+							template="parts/article.xml"
+							/>
+						<a href="" id="button_green_action">
+							<cms:text constant="get_more_info"/>
+						</a>
+					</section>
+				</option>
+
+				<!-- Default version -->
+			 	<option value="three" default="1">
+					<section id="about">
+						<cms:module
+							name="articles"
+							action="show"
+							text_id="treatment_arthritic"
+							template="parts/article.xml"
+							/>
+						<cms:mobile>
+							<img
+								src="_BASEURL.'/site/images/mobile_background.jpg'"
+								alt="background_mobile"
+								cms:eval="src"
+								class="background"
+								/>
+						</cms:mobile>
+						<div>
+							<h2><cms:text constant="contact"/></h2>
+							<cms:module
+								name="contact_form"
+								action="show"
+								text_id="contact_form"
+								>
+							<transfer name="service" value="arthritic"/>
+							</cms:module>
+						</div>
+					</section>
+			 	</option>
+			</cms:choice>
 			<!-- Section video -->
 			<section class="video">
 				<cms:module
