@@ -104,7 +104,7 @@
 						<cms:module
 							name="articles"
 							action="show"
-							text_id="treatment_cholesterol_alternative"
+							text_id="treatment_cholesterol_alt"
 							template="parts/article.xml"
 							/>
 						<div>
