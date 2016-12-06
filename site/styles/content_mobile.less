@@ -256,6 +256,41 @@ section#about div form div.controls button {
 	width: 65%;
 	height: 100%;
 	padding: 0.3em 0;
+	position: relative;
+}
+
+section#about div form div.controls button:before {
+	content:"";
+	border: 6px solid transparent;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 180px;
+	height: 45px;
+	animation: button_flicker 3s infinite linear;
+}
+
+
+@keyframes button_flicker {
+	60% {
+		transform: scale(0.5) translate(-50%, -50%);
+		border-color:transparent;
+		transform-origin: 0 0;
+		border-width: 5px;
+	}
+	80% {
+		border-color: fade(@color_red, 50%);
+		transform-origin: 0 0;
+		transform: scale(1.05) translate(-50%, -50%);
+		transform-origin: 0 0;
+	}
+	100% {
+		border-color: fade(@color_red, 0%);
+		transform-origin: 0 0;
+		transform: scale(1.1) translate(-50%, -50%);
+		transform-origin: 0 0;
+	}
 }
 
 /*
