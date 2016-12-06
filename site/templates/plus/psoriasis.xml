@@ -45,7 +45,7 @@
 							/>
 					</a>
 					<nav>
-						<a href="#home">
+						<a href="#top">
 							<cms:text constant="psoriasis_link" />
 						</a>
 						<cms:module
