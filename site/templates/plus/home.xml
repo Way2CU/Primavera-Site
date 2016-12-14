@@ -168,12 +168,7 @@
 
 					<!-- Section video -->
 					<section class="video">
-						<cms:module
-							name="youtube"
-							action="show"
-							text_id="lobby_video"
-							template="parts/youtube.xml"
-						/>
+						<video width="600" type="video/mp4" src="_BASEURL.'/site/videos/main.mp4'" cms:eval="src"></video>
 					</section>
 
 			<section id="product_gallery">
