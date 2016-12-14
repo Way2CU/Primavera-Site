@@ -168,7 +168,7 @@
 
 					<!-- Section video -->
 					<section class="video">
-						<video width="600" type="video/mp4" src="_BASEURL.'/site/videos/main.mp4'" cms:eval="src"></video>
+						<video width="600" type="video/mp4" src="_BASEURL.'/site/videos/main.mp4'" cms:eval="src" controls="true"></video>
 					</section>
 
 			<section id="product_gallery">
