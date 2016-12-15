@@ -168,28 +168,7 @@
 
 					<!-- Section video -->
 					<section class="video">
-
-					<!-- Video for desktop -->
-						<cms:desktop>
-							<video
-								 width="600"
-								 type="video/mp4"
-								 src="_BASEURL.'/site/videos/main.mp4'"
-								 cms:eval="src"
-								 controls="true"
-							/>
-						</cms:desktop>
-
-					<!-- Video for mobile -->
-						<cms:mobile>
-							<video
-								 type="video/mp4"
-								 src="_BASEURL.'/site/videos/main.mp4'"
-								 cms:eval="src"
-								 controls="true"
-							/>
-						</cms:mobile>
-
+						<cms:template file="parts/video.xml" />
 					</section>
 
 			<section id="product_gallery">

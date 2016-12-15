@@ -166,15 +166,12 @@
 					</section>
 			 	</option>
 			</cms:choice>
+
 			<!-- Section video -->
 			<section class="video">
-				<cms:module
-					name="youtube"
-					action="show"
-					text_id="cholesterol_video"
-					template="parts/youtube.xml"
-				/>
+				<cms:template file="parts/video.xml" />
 			</section>
+
 			<!-- Section product -->
 			<section id="product">
 				<cms:module
