@@ -167,16 +167,17 @@
 					</section>
 
 					<!-- Section video -->
-					<cms:desktop>
 					<section class="video">
-						<video width="600" type="video/mp4" src="_BASEURL.'/site/videos/main.mp4'" cms:eval="src" controls="true"></video>
+
+						<cms:desktop>
+							<video width="600" type="video/mp4" src="_BASEURL.'/site/videos/main.mp4'" cms:eval="src" controls="true"></video>
+						</cms:desktop>
+
+						<cms:mobile>
+								<video type="video/mp4" src="_BASEURL.'/site/videos/main.mp4'" cms:eval="src" controls="true"></video>
+						</cms:mobile>
+
 					</section>
-					</cms:desktop>
-					<cms:mobile>
-						<section class="video">
-							<video type="video/mp4" src="_BASEURL.'/site/videos/main.mp4'" cms:eval="src" controls="true"></video>
-						</section>
-					</cms:mobile>
 
 			<section id="product_gallery">
 						<cms:module
