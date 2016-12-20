@@ -142,15 +142,27 @@ Site.on_load = function() {
 	Site.video = document.querySelector('video');
 
 	var isPlaying = function(e) {
-		Site.video.style = "height: 200px";
+		if(window.location.pathname == "/plus") {
+			Site.video.style.width = "1200px";
+			Site.video.style.height = "600px";
+		} else {
+			Site.video.style.width = "960px";
+			Site.video.style.height = "600px";
+		}
 	}
 
 	var isPaused = function(e) {
-		Site.video.style = "height: 600px";
+		Site.video.style = "height: 200px";
+	}
+
+	var ready = function(e) {
+			Site.video.style.width = "200px";
+			Site.video.style.height = "200px";
 	}
 
 	Site.video.addEventListener('playing', isPlaying);
 	Site.video.addEventListener('pause', isPaused);
+	Site.video.addEventListener('canplay', ready);
 };
 
 
