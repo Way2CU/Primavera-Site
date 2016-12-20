@@ -1,13 +1,29 @@
 <document>
 	<!-- Video for desktop -->
 		<cms:desktop>
-			<video
-				 width="1200"
-				 type="video/mp4"
-				 src="_BASEURL.'/site/videos/main.mp4'"
-				 cms:eval="src"
-				 controls="true"
-			/>
+
+			<cms:if condition="URL::is_active('plus/home.xml')">
+
+				<video
+					 width="1200"
+					 type="video/mp4"
+					 src="_BASEURL.'/site/videos/main.mp4'"
+					 cms:eval="src"
+					 controls="true"
+				/>
+
+			</cms:if>
+
+			<cms:if condition="!URL::is_active('plus/home.xml')">
+				<video
+					 width="960"
+					 type="video/mp4"
+					 src="_BASEURL.'/site/videos/main.mp4'"
+					 cms:eval="src"
+					 controls="true"
+				/>
+			</cms:if>
+
 		</cms:desktop>
 
 	<!-- Video for mobile -->
