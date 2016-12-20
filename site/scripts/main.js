@@ -138,6 +138,19 @@ Site.on_load = function() {
 
 	for (var index in Caracal.ContactForm.list)
 		Caracal.ContactForm.list[index].events.connect('submit-success', push_event);
+
+	Site.video = document.querySelector('video');
+
+	var isPlaying = function(e) {
+		Site.video.style = "height: 200px";
+	}
+
+	var isPaused = function(e) {
+		Site.video.style = "height: 600px";
+	}
+
+	Site.video.addEventListener('playing', isPlaying);
+	Site.video.addEventListener('pause', isPaused);
 };
 
 
