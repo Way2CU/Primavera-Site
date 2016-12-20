@@ -139,25 +139,40 @@ Site.on_load = function() {
 	for (var index in Caracal.ContactForm.list)
 		Caracal.ContactForm.list[index].events.connect('submit-success', push_event);
 
+	//Select the video elemnt on the page
 	Site.video = document.querySelector('video');
 
+	//Creating the ratio width of the video
+	Site.ratio = 1.777777;
+
+	//when play button was clicked
 	var isPlaying = function(e) {
+
 		if(window.location.pathname == "/plus") {
-			Site.video.style.width = "1200px";
-			Site.video.style.height = "600px";
+			Site.video.style.width = 1200 + 'px';
+			Site.video.style.height = 1200 / Site.ratio + 'px';
 		} else {
-			Site.video.style.width = "960px";
-			Site.video.style.height = "600px";
+			Site.video.style.width = 960 + 'px';
+			Site.video.style.height = 960 / Site.ratio + 'px';
 		}
 	}
 
+	//when pause button was clicked
 	var isPaused = function(e) {
-		Site.video.style = "height: 200px";
+		Site.video.style.width = 1200 + 'px';
+		Site.video.style.height = 200 + 'px';
 	}
 
+	//when the video is ready to play
 	var ready = function(e) {
-			Site.video.style.width = "200px";
-			Site.video.style.height = "200px";
+		if(window.location.pathname == "/plus"){
+			Site.video.style.width = 1200 + 'px';
+			Site.video.style.height = 200 + 'px';
+		}else {
+			Site.video.style.width = 960 + 'px';
+			Site.video.style.height = 200 + 'px';
+		}
+
 	}
 
 	Site.video.addEventListener('playing', isPlaying);
