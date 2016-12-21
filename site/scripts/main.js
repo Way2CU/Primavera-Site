@@ -143,36 +143,31 @@ Site.on_load = function() {
 	Site.video = document.querySelector('video');
 
 	//Creating the ratio width of the video
-	Site.ratio = 1.777777;
+	Site.ratio;
+	Site.video_width;
+	Site.video_height;
+	Site.unit = "px";
 
 	//when play button was clicked
 	var isPlaying = function(e) {
+		var width = e.target.parentNode.offsetWidth;
+		Site.video.style.width = width + Site.unit;
+		Site.video.style.height = width / Site.ratio + Site.unit;
 
-		if(window.location.pathname == "/plus") {
-			Site.video.style.width = 1200 + 'px';
-			Site.video.style.height = 1200 / Site.ratio + 'px';
-		} else {
-			Site.video.style.width = 960 + 'px';
-			Site.video.style.height = 960 / Site.ratio + 'px';
-		}
 	}
 
 	//when pause button was clicked
 	var isPaused = function(e) {
-		Site.video.style.width = 1200 + 'px';
-		Site.video.style.height = 200 + 'px';
+		Site.video.style.width = Site.video_width + Site.unit;
+		Site.video.style.height = Site.video_width / Site.ratio + Site.unit;
+			console.log(e.target.offsetWidth);
 	}
 
 	//when the video is ready to play
 	var ready = function(e) {
-		if(window.location.pathname == "/plus"){
-			Site.video.style.width = 1200 + 'px';
-			Site.video.style.height = 200 + 'px';
-		}else {
-			Site.video.style.width = 960 + 'px';
-			Site.video.style.height = 200 + 'px';
-		}
-
+		Site.video_width = e.target.offsetWidth;
+		Site.video_height = e.target.offsetHeight;
+		Site.ratio = Site.video_width / Site.video_height;
 	}
 
 	Site.video.addEventListener('playing', isPlaying);
