@@ -333,6 +333,7 @@ section#about div form label.checkbox span {
 * Section Video
 */
 section.video {
+	margin: 0 calc(~'(100% - 960px)' / 2 );
 	text-align: center;
 	padding: 2em 0;
 	background-image: url(../images/pattern.png);
@@ -341,9 +342,13 @@ section.video {
 	background-repeat: repeat;
 }
 
+.home section.video {
+	margin: 0 calc(~'(100% - 1200px)' / 2 );
+}
+
 section.video video {
-	width: 1200px;
 	transition: all 0.3s;
+	height: 200px;
 }
 
 //Floating form grouping
