@@ -160,7 +160,6 @@ Site.on_load = function() {
 	var isPaused = function(e) {
 		Site.video.style.width = Site.video_width + Site.unit;
 		Site.video.style.height = Site.video_width / Site.ratio + Site.unit;
-			console.log(e.target.offsetWidth);
 	}
 
 	//when the video is ready to play
