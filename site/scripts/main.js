@@ -103,6 +103,16 @@ Site.on_load = function() {
 			.addClass('form')
 			.setContentFromDOM('div#floating_form');
 
+	//Dialog Video
+	Site.dialog_video = new Dialog();
+		Site.dialog_video
+			.addClass('video_float')
+			.setContentFromDOM('div.video_floating');
+
+	$("a.play_header").on("click", function(event) {
+		event.preventDefault();
+		Site.dialog_video.show();
+	});
 
 	//Whatsapp Click Handler
 	$("a.whatsapp").on("click", function(event){
