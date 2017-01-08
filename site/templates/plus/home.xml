@@ -147,6 +147,10 @@
 							text_id="header_lobby"
 							template="parts/article.xml"
 						/>
+						<a href="javascript:void(0)" class="play_header">
+							<cms:text constant="play_video" />
+							<cms:svg file="site-sprite.svg" symbol="play" />
+						</a>
 						<cms:mobile>
 							<img
 								src="_BASEURL.'/site/images/mobile_background.jpg'"
@@ -254,5 +258,8 @@
 				</cms:mobile>
 			</footer>
 		<cms:template file="parts/floating_form.xml"/>
+		<div class="video_floating">
+			<cms:template file="parts/video_floating.xml" />
+		</div>
 	</html>
 </document>
