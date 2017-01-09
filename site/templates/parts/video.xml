@@ -1,24 +1,8 @@
 <document>
-	<!-- Video for desktop -->
-		<cms:desktop>
-
-				<video
-					 type="video/mp4"
-					 width="600"
-					 src="_BASEURL.'/site/videos/main.mp4'"
-					 cms:eval="src"
-					 controls="true"
-				/>
-
-		</cms:desktop>
-
-	<!-- Video for mobile -->
-		<cms:mobile>
-			<video
-				 type="video/mp4"
-				 src="_BASEURL.'/site/videos/main.mp4'"
-				 cms:eval="src"
-				 controls="true"
-			/>
-		</cms:mobile>
+	<video
+		 type="video/mp4"
+		 src="_BASEURL.'/site/videos/main.mp4'"
+		 cms:eval="src"
+		 controls="true"
+	/>
 </document>
