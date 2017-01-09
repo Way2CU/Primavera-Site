@@ -149,39 +149,39 @@ Site.on_load = function() {
 	for (var index in Caracal.ContactForm.list)
 		Caracal.ContactForm.list[index].events.connect('submit-success', push_event);
 
-	//Select the video elemnt on the page
-	Site.video = document.querySelector('video');
+	// //Select the video elemnt on the page
+	// Site.video = document.querySelector('video');
 
-	//Creating the ratio width of the video
-	Site.ratio;
-	Site.video_width;
-	Site.video_height;
-	Site.unit = "px";
+	// //Creating the ratio width of the video
+	// Site.ratio;
+	// Site.video_width;
+	// Site.video_height;
+	// Site.unit = "px";
 
-	//when play button was clicked
-	var isPlaying = function(e) {
-		var width = e.target.parentNode.offsetWidth;
-		Site.video.style.width = width + Site.unit;
-		Site.video.style.height = width / Site.ratio + Site.unit;
+	// //when play button was clicked
+	// var isPlaying = function(e) {
+	// 	var width = e.target.parentNode.offsetWidth;
+	// 	Site.video.style.width = width + Site.unit;
+	// 	Site.video.style.height = width / Site.ratio + Site.unit;
 
-	}
+	// }
 
-	//when pause button was clicked
-	var isPaused = function(e) {
-		Site.video.style.width = Site.video_width + Site.unit;
-		Site.video.style.height = Site.video_width / Site.ratio + Site.unit;
-	}
+	// //when pause button was clicked
+	// var isPaused = function(e) {
+	// 	Site.video.style.width = Site.video_width + Site.unit;
+	// 	Site.video.style.height = Site.video_width / Site.ratio + Site.unit;
+	// }
 
-	//when the video is ready to play
-	var ready = function(e) {
-		Site.video_width = e.target.offsetWidth;
-		Site.video_height = e.target.offsetHeight;
-		Site.ratio = Site.video_width / Site.video_height;
-	}
+	// //when the video is ready to play
+	// var ready = function(e) {
+	// 	Site.video_width = e.target.offsetWidth;
+	// 	Site.video_height = e.target.offsetHeight;
+	// 	Site.ratio = Site.video_width / Site.video_height;
+	// }
 
-	Site.video.addEventListener('playing', isPlaying);
-	Site.video.addEventListener('pause', isPaused);
-	Site.video.addEventListener('canplay', ready);
+	// Site.video.addEventListener('playing', isPlaying);
+	// Site.video.addEventListener('pause', isPaused);
+	// Site.video.addEventListener('canplay', ready);
 };
 
 
