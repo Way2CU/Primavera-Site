@@ -72,7 +72,7 @@
 							</ul>
 						</li>
 						<li>
-							<a href="#top">
+							<a href="javascript:void(0)" class="contact">
 								<cms:text constant="contact_us_lobby"/>
 							</a>
 						</li>
