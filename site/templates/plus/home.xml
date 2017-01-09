@@ -39,7 +39,7 @@
 				<nav>
 					<ul>
 						<li>
-							<a href="#services">
+							<a href="#about_plus">
 								<cms:text constant="about_us_lobby"/>
 							</a>
 						</li>
