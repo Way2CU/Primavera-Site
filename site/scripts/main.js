@@ -126,6 +126,12 @@ Site.on_load = function() {
 		Site.dialog_form.show();
 	});
 
+	//Nav 'Contact_us' link on click dialog show
+	$('a.contact').on("click", function(event){
+		event.preventDefault();
+		Site.dialog_form.show();
+	});
+
 	//Section about alternative version 3 button click dialog show
 	$('a#button_green_action').on("click", function(event){
 		event.preventDefault();
