@@ -225,6 +225,7 @@ section#about {
 	padding: 40px calc(~'(100% - 960px)' / 2);
 	position: relative;
 	color: #58595B;
+	position: relative;
 }
 
 section#about article {
@@ -260,6 +261,30 @@ section#about article p > strong {
 	display: inline-block;
 	margin-right: 0;
 }
+
+section#about a.play_header {
+	position: absolute;
+	bottom: 40px;
+	right: calc(~'50% - 200px');
+	display: inline-block;
+	color: white;
+	background-color: @color_red;
+	width: 200px;
+	text-align: center;
+	padding: 0.5em 0em;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+section#about a.play_header svg {
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	vertical-align: middle;
+	fill: white;
+	padding-right: 1em;
+}
+
 
 section#about > div {
 	display: inline-block;

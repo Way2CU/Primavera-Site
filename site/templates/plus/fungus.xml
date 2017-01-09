@@ -152,6 +152,13 @@
 								class="background"
 								/>
 						</cms:mobile>
+
+						<!-- Play Video Button -->
+						<a href="javascript:void(0)" class="play_header">
+							<cms:text constant="play_video" />
+							<cms:svg file="site-sprite.svg" symbol="play" />
+						</a>
+
 						<div>
 							<h2><cms:text constant="contact"/></h2>
 							<cms:module
