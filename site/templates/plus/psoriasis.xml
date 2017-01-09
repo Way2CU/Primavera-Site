@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
-	<cms:var name="_DOCTYPE"/>
 	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
 		<head>
 			<title>
@@ -168,11 +167,6 @@
 			 	</option>
 			</cms:choice>
 
-			<!-- Section video -->
-			<section class="video">
-				<cms:template file="parts/video.xml" />
-			</section>
-
 			<!-- Section product -->
 			<section id="product">
 				<cms:module
@@ -271,6 +265,11 @@
 					text_id="quality"
 					template="parts/article_quality.xml"
 					/>
+
+				<!-- Section video -->
+				<div class="video">
+					<cms:template file="parts/video.xml" />
+				</div>
 
 				<cms:template file="parts/section_quality_icons.xml"/>
 

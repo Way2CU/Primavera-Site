@@ -4,6 +4,7 @@
 
 				<video
 					 type="video/mp4"
+					 width="600"
 					 src="_BASEURL.'/site/videos/main.mp4'"
 					 cms:eval="src"
 					 controls="true"

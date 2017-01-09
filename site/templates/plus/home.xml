@@ -169,11 +169,6 @@
 							</div>
 					</section>
 
-					<!-- Section video -->
-					<section class="video">
-						<cms:template file="parts/video.xml" />
-					</section>
-
 			<section id="product_gallery">
 						<cms:module
 							name="gallery"
@@ -233,6 +228,11 @@
 					text_id="quality"
 					template="parts/article_quality.xml"
 				/>
+
+				<!-- Section video -->
+				<div class="video">
+					<cms:template file="parts/video.xml" />
+				</div>
 
 				<cms:template file="parts/section_quality_icons.xml"/>
 
