@@ -109,40 +109,60 @@ Site.on_load = function() {
 			.addClass('video_float')
 			.setContentFromDOM('div.video_floating');
 
-	$("a.play_header").on("click", function(event) {
+
+	Site.handle_dialog_form = function() {
+		event.preventDefault();
+		Site.dialog_form.show();
+	}
+
+	Site.handle_dialog_video = function() {
 		event.preventDefault();
 		Site.dialog_video.show();
-	});
+	}
 
-	//Whatsapp Click Handler
-	$("a.whatsapp").on("click", function(event){
+	Site.handle_dialog = function() {
 		event.preventDefault();
 		Site.dialog.show();
-	});
+	}
 
-	//Floating clicker on click dialog show
-	$('a.floating_clicker').on("click", function(event){
-		event.preventDefault();
-		Site.dialog_form.show();
-	});
+	if (document.querySelector('a#button_green_action')) {
+		Site.green_button = document.querySelector('a#button_green_action');
+		Site.green_button.addEventListener('click', Site.handle_dialog_form);
+		// create handler for submitting dialog form
+		Caracal.ContactForm.list[0].events.connect('submit-success', function(event) {
+			Site.dialog_form.hide();
+			return true;
+		});
+	}
 
-	//Nav 'Contact_us' link on click dialog show
-	$('a.contact').on("click", function(event){
-		event.preventDefault();
-		Site.dialog_form.show();
-	});
+	if (!document.querySelector('a#button_green_action')) {
+		Site.header_button = document.querySelector('a.play_header');
+		Site.header_button.addEventListener('click', 	Site.handle_dialog_video);
+		Site.contact_button = document.querySelector('a.contact');
+		Site.contact_button.addEventListener('click', Site.handle_dialog_form);
 
-	//Section about alternative version 3 button click dialog show
-	$('a#button_green_action').on("click", function(event){
-		event.preventDefault();
-		Site.dialog_form.show();
-	});
+		// create handler for submitting dialog form
+		Caracal.ContactForm.list[0].events.connect('submit-success', function(event) {
+			Site.dialog_form.hide();
+			return true;
+		});
 
-	// create handler for submitting dialog form
-	Caracal.ContactForm.list[1].events.connect('submit-success', function(event) {
-		Site.dialog_form.hide();
-		return true;
-	});
+		// create handler for submitting dialog form
+		Caracal.ContactForm.list[1].events.connect('submit-success', function(event) {
+			Site.dialog_form.hide();
+			return true;
+		});
+
+	}
+
+
+		Site.whatsapp_button = document.querySelector('a.whatsapp');
+		Site.floating_button = document.querySelector('a.floating_clicker');
+
+
+		Site.whatsapp_button.addEventListener('click', Site.handle_dialog);
+		Site.floating_button.addEventListener('click', Site.handle_dialog_form);
+
 
 	// connect submission to Google Analytics
 	var push_event = function(data) {
