@@ -1,7 +1,7 @@
 
 function QualitySwitcher(video){
-
 	var self = this;
+
 	self.video = video;
 	self.sources = [];
 	self.quality_list = [];
@@ -9,10 +9,7 @@ function QualitySwitcher(video){
 	self.progress = null;
 	self.button = null;
 
-
-
 	self._init = function(){
-
 		//Push video sources into array
 		//Push data-set into array
 		for(var i = 0; i<= (self.video.children.length -1); i++) {
@@ -59,22 +56,14 @@ function QualitySwitcher(video){
 			self.button.textContent = self.quality_list[self.index + 1];
 
 		}
-
 	}
-
-
-
-
 	self._init();
-
 }
 
 window.addEventListener('load', function() {
-
 	var video_list = document.querySelectorAll('video');
 
 	for(var i = 0; i<video_list.length; i++) {
 		new QualitySwitcher(video_list[i]);
 	};
-
 })
