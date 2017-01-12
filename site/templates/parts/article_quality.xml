@@ -11,6 +11,10 @@
 			<cms:text constant="3_stages"/>
 		</a>
 
+		<div class="video">
+			<cms:template file="parts/video.xml" />
+		</div>
+
 		<cms:markdown param="content" multilanguage="yes"/>
 	</article>
 </document>
