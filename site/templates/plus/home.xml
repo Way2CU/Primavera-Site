@@ -229,11 +229,6 @@
 					template="parts/article_quality.xml"
 				/>
 
-				<!-- Section video -->
-				<div class="video">
-					<cms:template file="parts/video.xml" />
-				</div>
-
 				<cms:template file="parts/section_quality_icons.xml"/>
 
 				<a href="#top">
