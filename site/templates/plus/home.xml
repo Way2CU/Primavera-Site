@@ -77,7 +77,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="#experts">
+							<a href="#services">
 								<cms:text constant="our_services"/>
 							</a>
 						</li>
