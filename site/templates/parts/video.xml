@@ -1,8 +1,6 @@
 <document>
-	<video
-		 type="video/mp4"
-		 src="_BASEURL.'/site/videos/main.mp4'"
-		 cms:eval="src"
-		 controls="true"
-	/>
+	<video controls="controls">
+	  <source src="_BASEURL.'/site/videos/TTM_x264_480.mp4'" type="video/mp4" cms:eval="src" class="low" data-set="SD">
+	  <source src="_BASEURL.'/site/videos/TTM_x264_720.mp4'" type="video/mp4" cms:eval="src" class="high" data-set="HD">
+	</video>
 </document>
