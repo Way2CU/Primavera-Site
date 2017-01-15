@@ -176,7 +176,7 @@ Site.on_load = function() {
 		Caracal.ContactForm.list[index].events.connect('submit-success', push_event);
 
 	/**
-	 * Selects all videos on the page and init object QualitySwitcher
+	* Selects all videos on the page and init object QualitySwitcher
 	*/
 	var video_list = document.querySelectorAll('video');
 	for(var i = 0; i<video_list.length; i++) {
