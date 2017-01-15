@@ -208,6 +208,14 @@ Site.on_load = function() {
 	// Site.video.addEventListener('playing', isPlaying);
 	// Site.video.addEventListener('pause', isPaused);
 	// Site.video.addEventListener('canplay', ready);
+
+	/**
+	 * Selects all videos and creates an object
+	 */
+	// var video_list = document.querySelectorAll('video');
+	// for(var i = 0; i<video_list.length; i++) {
+	// 	new QualitySwitcher(video_list[i]);
+	// };
 };
 
 
