@@ -83,15 +83,31 @@ Site.is_mobile = function() {
 			/**
 			 * Create button
 			 */
-			self.button = document.createElement("button");
-			var content = document.createTextNode("HD");
-			self.button.appendChild(content);
-			self.video.parentNode.appendChild(self.button);
+			self.button = document.createElement("select");
+			for(var i = 0, count=self.quality_list.length; i<count; i++) {
+				var option = document.createElement("option");
+				option.value = self.quality_list[i];
+				option.text = self.quality_list[i];
+				self.button.appendChild(option);
+			};
 
+			/**
+			 * check curerent source
+			 */
+			self.video.oncanplay = function (event){
+				var source = this.currentSrc;
+				console.log(source);
+				if (self.sources.indexOf(source)) {
+					self.index = self.sources.indexOf(source);
+					self.button.option = self.quality_list[self.index];
+				};
+			};
+
+			self.video.parentNode.appendChild(self.button);
 			/**
 			 * event click listener to handle switch src on video
 			 */
-			self.button.addEventListener('click', self.handle_switch);
+			self.button.addEventListener('change', self.handle_switch);
 
 			/**
 			 * First source of video
@@ -112,20 +128,14 @@ Site.is_mobile = function() {
 		 * Switches sources on click
 		 */
 		self.handle_switch = function () {
-			self.index ++;
-			if(self.index < self.sources.length) {
-				self.button.textContent = self.quality_list[self.index - 1];
-				self.video.src = self.sources[self.index];
-				self.video.currentTime = self.progress;
-				self.video.play();
-				self.index ++;
-			}
-			else {
-				self.index = 0;
-				self.video.src = self.sources[self.index];
-				self.button.textContent = self.quality_list[self.index + 1];
-			}
-		}
+	 		self.index++;
+		  	if (self.index > self.video.children.length -1)
+		  	self.index = 0;
+
+		   	self.button.option = self.quality_list[self.index];
+		   	self.video.src = self.sources[self.index];
+		};
+
 		self._init();
 	}
 
