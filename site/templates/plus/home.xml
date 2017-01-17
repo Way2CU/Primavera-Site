@@ -146,10 +146,12 @@
 							text_id="header_lobby"
 							template="parts/article.xml"
 						/>
-						<a href="javascript:void(0)" class="play_header">
-							<cms:text constant="play_video" />
-							<cms:svg file="site-sprite.svg" symbol="play" />
-						</a>
+						<cms:desktop>
+							<a href="javascript:void(0)" class="play_header">
+								<cms:text constant="play_video" />
+								<cms:svg file="site-sprite.svg" symbol="play" />
+							</a>
+						</cms:desktop>
 						<cms:mobile>
 							<img
 								src="_BASEURL.'/site/images/mobile_background.jpg'"
