@@ -1289,6 +1289,14 @@ section#quality div.video video {
 	width: 100%;
 }
 
+section#quality div.video select {
+	margin: 1em 0;
+	border: 1px solid @color_grey_dark;
+	color: @color_grey_dark;
+	padding: 0.5em 1em;
+	background-color: white;
+}
+
 /*
 Dialog Box
 */
@@ -1454,6 +1462,13 @@ div.dialog.form.visible div.title {
 
 div.dialog.video_float.visible {
 	top: 10%;
+}
+
+div.dialog.video_float div.content div.inner_content select {
+	border: 1px solid black;
+	background-color: white;
+	color: @color_red;
+	padding: 0 1em;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
