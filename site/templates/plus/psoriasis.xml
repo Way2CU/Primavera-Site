@@ -146,6 +146,11 @@
 							template="parts/article.xml"
 							/>
 						<cms:mobile>
+							<!-- Play Video Button -->
+							<a href="javascript:void(0)" class="play_header">
+								<cms:text constant="play_video" />
+								<cms:svg file="site-sprite.svg" symbol="play" />
+							</a>
 							<img
 								src="_BASEURL.'/site/images/mobile_background.jpg'"
 								alt="background_mobile"
@@ -154,11 +159,13 @@
 								/>
 						</cms:mobile>
 
-						<!-- Play Video Button -->
-						<a href="javascript:void(0)" class="play_header">
-							<cms:text constant="play_video" />
-							<cms:svg file="site-sprite.svg" symbol="play" />
-						</a>
+						<cms:desktop>
+							<!-- Play Video Button -->
+							<a href="javascript:void(0)" class="play_header">
+								<cms:text constant="play_video" />
+								<cms:svg file="site-sprite.svg" symbol="play" />
+							</a>
+						</cms:desktop>
 
 						<div>
 							<h2><cms:text constant="contact"/></h2>
