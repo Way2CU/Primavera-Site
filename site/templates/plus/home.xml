@@ -254,7 +254,7 @@
 
 			<cms:template file="parts/floating_form.xml"/>
 			<div class="video_floating">
-				<cms:template file="parts/video_floating.xml" />
+				<cms:template file="parts/video.xml" />
 			</div>
 		</body>
 	</html>
