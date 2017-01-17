@@ -9,6 +9,7 @@
 				<cms:text constant="title_preho"/>
 			</title>
 			<cms:collection  include="page_control"/>
+			<script src="_BASEURL.'/site/scripts/quality_switcher.js'" cms:eval="src"></script>
 			<cms:raw file="parts/gtmhead.txt"/>
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
