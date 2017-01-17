@@ -11,8 +11,7 @@
 
 		<body class="home" id="top">
 			<cms:raw file="parts/gtmbody.txt"/>
-			<a href="" class="floating_clicker">
-			</a>
+			<a href="" class="floating_clicker"></a>
 
 			<header id="home">
 				<cms:desktop>
@@ -252,9 +251,11 @@
 					</cms:template>
 				</cms:mobile>
 			</footer>
-		<cms:template file="parts/floating_form.xml"/>
-		<div class="video_floating">
-			<cms:template file="parts/video_floating.xml" />
-		</div>
+
+			<cms:template file="parts/floating_form.xml"/>
+			<div class="video_floating">
+				<cms:template file="parts/video_floating.xml" />
+			</div>
+		</body>
 	</html>
 </document>
