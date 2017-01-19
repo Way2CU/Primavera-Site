@@ -743,8 +743,6 @@ body.hemorrhoids section#product_shot {
 	background-image: url(../images/nomoroid.jpg);
 }
 
-
-
 /*
 *Section Product Gallery
 */
@@ -754,7 +752,7 @@ section#product_gallery {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: cover;
-	padding: 135px calc(~'(100% - 960px)' / 2 );
+	padding: 120px calc(~'(100% - 960px)' / 2 );
 	position: relative;
 }
 
@@ -764,11 +762,16 @@ section#product_gallery ul {
 	vertical-align: middle;
 	padding: 0;
 	margin: 0;
-	height: 550px;
+	float: right;
+	padding-left: 1em;
 }
 
 section#product_gallery ul li {
 	padding-bottom: 40px;
+}
+
+section#product_gallery ul li:last-of-type {
+	padding-bottom: 0;
 }
 
 section#product_gallery ul li a img {
@@ -785,35 +788,37 @@ section#product_gallery ul li a img:hover {
 
 
 section#product_gallery  div.thumb_large {
-	position: absolute;
-	top: 50%;
-	transform: translatey(-50%);
-	right: calc(~'50% - 379px');
-	left: auto;
+	display: none;
 	visibility: hidden;
 	opacity: 0;
-	min-height: 550px;
+	float: right;
 }
 
 section#product_gallery  div.thumb_large.visible {
 	visibility: visible;
 	opacity: 1;
+	display: inline-block;
 }
 
 section#product_gallery  div.thumb_large img {
 	display: inline-block;
 	vertical-align: top;
 	border: 2px solid @color_grey;
+	float: right;
+}
+
+section#product_gallery  div.thumb_large div.description {
+	float: right;
+	width: 300px;
+	padding-right: 1em;
 }
 
 section#product_gallery  div.thumb_large p {
 	display: inline-block;
 	vertical-align: top;
-	width: 365px;
 	box-sizing: border-box;
-	padding-right: 1em;
-	padding-left: 1em;
 	margin: 0;
+	float: right;
 }
 
 /*
