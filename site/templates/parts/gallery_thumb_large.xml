@@ -6,7 +6,10 @@
 				alt="$params['title'][$language]"
 				cms:eval="src,alt"
 				/>
+		<div class="description">
 			<cms:markdown param="description" multilanguage="yes" />
+		</div>
+
 		</div>
 	</cms:desktop>
 	<cms:mobile>
