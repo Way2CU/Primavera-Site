@@ -218,6 +218,7 @@
 						order_by="text_id"
 						template="parts/gallery_thumb_large.xml"
 						/>
+						<div style="clear:both"></div>
 				</cms:desktop>
 				<cms:mobile>
 					<cms:module
