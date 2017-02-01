@@ -35,13 +35,6 @@
 							cms:eval="src"
 							/>
 					</a>
-					<a href="https://www.facebook.com/PLUS-by-TTM-797919950310591/?fref=ts" target="_blank" class="facebook">
-						<img
-							src="_BASEURL.'/site/images/facebook.svg'"
-							alt="facebook"
-							cms:eval="src"
-							/>
-					</a>
 					<nav>
 						<a href="#top">
 							<cms:text constant="arthritic_link" />
