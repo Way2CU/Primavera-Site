@@ -103,6 +103,7 @@
 	background-position: bottom center;
 	background-size: 100% auto;
 	background-repeat: no-repeat;
+	padding: 90px 0;
 }
 
 .home section#services article,
@@ -178,6 +179,7 @@ section#about div {
 	padding-left: 1em;
 	padding-right: 1em;
 	background-color: @color_grey_light;
+	padding-bottom: 90px;
 }
 
 section#about div h4 {
@@ -414,6 +416,7 @@ body.hemorrhoids section#product_shot {
 
 section#product_gallery {
 	padding: 0em 1em;
+	padding: 90px 0;
 }
 
 section#product_gallery p {
@@ -483,12 +486,14 @@ section#information {
 	background-color: @color_grey_dark;
 	height: 540px;
 	position: relative;
+	box-sizing: border-box;
 }
 
 section#information div#tabs {
 	display: block;
 	width: 100%;
 	background-color: white;
+	padding-top: 90px;
 }
 
 section#information div#tabs a {
@@ -528,12 +533,7 @@ section#information div#tabs a.active {
 /*Section Mobile #Information Content*/
 
 section#information div.content {
-	position: absolute;
-	width: 100%;
-	top: 55px;
-	right: 0;
-	visibility: hidden;
-	opacity: 0;
+	display: none;
 	color: white;
 }
 
@@ -542,8 +542,7 @@ section#information div.content article {
 }
 
 section#information div.content.visible {
-	visibility: visible;
-	opacity: 1;
+	display: block;
 }
 
 section#information div.content div.testemonials {
@@ -628,6 +627,7 @@ section#quality {
 	margin: 1em;
 	position: relative;
 	text-align: center;
+	padding-top: 90px;
 }
 
 section#quality div.video video {
