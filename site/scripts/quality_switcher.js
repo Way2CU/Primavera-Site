@@ -38,7 +38,6 @@ function QualitySwitcher(video){
 		 */
 		self.video.oncanplay = function (event){
 			var source = this.currentSrc;
-			console.log(source);
 			if (self.sources.indexOf(source)) {
 				self.index = self.sources.indexOf(source);
 				self.button.option = self.quality_list[self.index];
@@ -63,7 +62,6 @@ function QualitySwitcher(video){
 	 */
 	self.handle_video_progress = function(){
 		self.progress = self.video.currentTime;
-		console.log(self.progress);
 	}
 
 	/**
