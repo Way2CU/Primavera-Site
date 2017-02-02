@@ -142,20 +142,27 @@ Site.on_load = function() {
 	// create handler for submitting and redirecting to thank you page
 	for (var i=0, count=Caracal.ContactForm.list.length; i < count; i++) {
 		var form = Caracal.ContactForm.list[i];
-		form.events.connect('submit-success', function(event) {
-				var base_url = document.querySelector('meta[property=base-url]').getAttribute('content');
-				window.location = base_url + '/plus/thank-you';
+		var is_newsletter = form._fields.length <= 2;
 
-				if (dataLayer)
-					dataLayer.push({event: "leadSent"});
-			});
+		if (!is_newsletter) {
+			form.events.connect('submit-success', function(event) {
+					var base_url = document.querySelector('meta[property=base-url]').getAttribute('content');
+					window.location = base_url + '/plus/thank-you';
+
+					if (dataLayer)
+						dataLayer.push({event: "leadSent"});
+				});
+		}
 	}
 
-	Site.whatsapp_button = document.querySelector('a.whatsapp');
-	Site.floating_button = document.querySelector('a.floating_clicker');
+	var whatsapp_button = document.querySelector('a.whatsapp');
+	if (whatsapp_button)
+		whatsapp_button.addEventListener('click', Site.handle_dialog);
 
-	Site.whatsapp_button.addEventListener('click', Site.handle_dialog);
-	Site.floating_button.addEventListener('click', Site.handle_dialog_form);
+	var floating_button = document.querySelector('a.floating_clicker');
+	if (floating_button)
+		floating_button.addEventListener('click', Site.handle_dialog_form);
+
 };
 
 // connect document `load` event with handler function
