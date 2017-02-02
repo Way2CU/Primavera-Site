@@ -15,5 +15,6 @@
 	"/plus/fungus/{alternative}": "plus/fungus.xml",
 	"/plus/hemorrhoids": "plus/hemorrhoids.xml",
 	"/plus/hemorrhoids/{alternative}": "plus/hemorrhoids.xml",
-	"/plus/404": "plus/error_404.xml"
+	"/plus/404": "plus/error_404.xml",
+	"/plus/thank-you": "plus/thank_you.xml"
 }
