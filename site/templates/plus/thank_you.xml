@@ -1,3 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE document SYSTEM "../units/schema/language.dtd">
 <document>
-	<h2>Thank you</h2>
+	<html lang="$language" dir="$language_rtl ? 'rtl' : 'ltr'" cms:eval="lang,dir">
+		<head>
+			<title><cms:text constant="site_title"/></title>
+			<cms:collection  include="page_control"/>
+			<script src="_BASEURL.'/site/scripts/quality_switcher.js'" cms:eval="src"></script>
+			<cms:raw file="parts/gtmhead.txt"/>
+			<cms:module name="head_tag" action="print_tag"/>
+		</head>
+
+		<body class="home" id="top">
+			<cms:raw file="parts/gtmbody.txt"/>
+
+			<header id="home">
+				<cms:desktop>
+					<cms:module
+						name="links"
+						action="show"
+						text_id="phone"
+						template="parts/link_phone.xml"
+					/>
+				<a href="#" class="whatsapp">
+				   	<img
+						src="_BASEURL.'/site/images/whatsapp.svg'"
+						alt="whatsapp"
+						cms:eval="src"
+					/>
+				</a>
+				<a href="https://www.facebook.com/PLUS-by-TTM-797919950310591/?fref=ts" target="_blank" class="facebook">
+				<img
+					src="_BASEURL.'/site/images/facebook.svg'"
+					alt="facebook"
+					cms:eval="src"
+				/>
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a href="#about_plus">
+								<cms:text constant="about_us_lobby"/>
+							</a>
+						</li>
+						<li>
+							<a href="" class="products">
+								<cms:text constant="the_products"/>
+							</a>
+							<ul id="sub_menu">
+								<li>
+									<a href="URL::make(array(), 'plus/constipation.xml')" cms:eval="href"><cms:text constant="aperta"/></a>
+								</li>
+								<li>
+									<a href="URL::make(array(), 'plus/arthritic.xml')" cms:eval="href"><cms:text constant="preho"/></a>
+								</li>
+								<li>
+									<a href="URL::make(array(), 'plus/cholesterol.xml')" cms:eval="href"><cms:text constant="triger"/></a>
+								</li>
+								<li>
+									<a href="URL::make(array(), 'plus/gums.xml')" cms:eval="href"><cms:text constant="periodontal"/></a>
+								</li>
+								<li>
+									<a href="URL::make(array(), 'plus/fungus.xml')" cms:eval="href"><cms:text constant="xagaris"/></a>
+								</li>
+								<li>
+									<a href="URL::make(array(), 'plus/psoriasis.xml')" cms:eval="href"><cms:text constant="relipso"/></a>
+								</li>
+								<li>
+									<a href="URL::make(array(), 'plus/hemorrhoids.xml')" cms:eval="href"><cms:text constant="soluroids"/></a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="javascript:void(0)" class="contact">
+								<cms:text constant="contact_us_lobby"/>
+							</a>
+						</li>
+						<li>
+							<a href="#services">
+								<cms:text constant="our_services"/>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="URL::make(array(), 'plus/home.xml')" cms:eval="href">
+					<img
+						src="_BASEURL.'/site/images/logo.svg'"
+						alt="primavera_plus"
+						cms:eval="src"
+						class="logo"
+					/>
+				</a>
+				</cms:desktop>
+				<cms:mobile>
+					<div class="mobile_title">
+						<a href="javascript:void(0)" class="menu">
+							<span></span>
+						</a>
+						<img
+							src="_BASEURL.'/site/images/logo.svg'"
+							alt="primavera_plus"
+							cms:eval="src"
+							class="logo"
+						/>
+						<div class="social">
+							<cms:module
+								name="links"
+								action="show"
+								text_id="phone"
+								template="parts/link_phone.xml"
+							/>
+						</div>
+					</div>
+				<nav class="mobile_menu">
+					<cms:desktop>
+						<cms:module
+							name="links"
+							action="show_link_list"
+							group="nav"
+							template="parts/links_nav_list.xml"
+						/>
+					</cms:desktop>
+					<cms:mobile>
+						<a href="#experts">
+							<cms:text constant="about_us_lobby"/>
+						</a>
+						<a href="#product_gallery">
+							<cms:text constant="the_products"/>
+						</a>
+						<a href="#about">
+							<cms:text constant="contact_us_lobby"/>
+						</a>
+						<a href="#services">
+							<cms:text constant="our_services"/>
+						</a>
+					</cms:mobile>
+				</nav>
+				</cms:mobile>
+			</header>
+
+			<!-- Section about  thankyou-->
+					<section id="about" class="thankyou">
+						<cms:module
+							name="articles"
+							action="show"
+							text_id="thankyou_article"
+							template="parts/article.xml"
+						/>
+						<cms:module
+							name="contact_form"
+							action="show"
+							text_id="thankyou_form"
+						/>
+						<cms:mobile>
+							<img
+								src="_BASEURL.'/site/images/mobile_background.jpg'"
+								alt="background_mobile"
+								cms:eval="src"
+								class="background"
+							/>
+						</cms:mobile>
+					</section>
+
+					<section class="video_thankyou">
+						<div class="video">
+							<cms:template file="parts/video.xml" />
+						</div>
+					</section>
+
+
+			<footer>
+				<cms:desktop>
+					<cms:template file="stock/copyright.xml">
+						<param name="holder" value="copyright_holder"/>
+						<param name="text" value="copyright_text"/>
+						<param name="light" value=""/>
+					</cms:template>
+				</cms:desktop>
+				<cms:mobile>
+					<cms:template file="stock/copyright.xml">
+						<param name="holder" value="copyright_holder"/>
+						<param name="text" value="copyright_text"/>
+						<param name="light" value=""/>
+					</cms:template>
+				</cms:mobile>
+			</footer>
+
+			<cms:template file="parts/floating_form.xml"/>
+			<div class="video_floating">
+				<cms:template file="parts/video.xml" />
+			</div>
+		</body>
+	</html>
 </document>
