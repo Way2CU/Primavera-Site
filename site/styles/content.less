@@ -89,6 +89,87 @@ body a.floating_clicker {
 }
 
 /*
+*Thank you page
+*/
+section#about.thankyou {
+	min-height: 350px;
+	padding: 0 calc(~'(100% - 1200px)' / 2 );
+}
+
+section#about.thankyou article {
+	padding-top: 1em;
+}
+
+section#about.thankyou form {
+	position: absolute;
+	bottom: 1em;
+	right: calc(~'50% - 200px');
+}
+
+section#about.thankyou form label {
+	display: inline-block;
+	vertical-align: middle;
+	box-sizing: border-box;
+}
+
+section#about.thankyou form label span {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 1em;
+	color: @color_red;
+	font-weight: 700;
+}
+
+section#about.thankyou form label input {
+	display: inline-block;
+	vertical-align: middle;
+	border: 1px solid @color_grey;
+	padding: 0.5em;
+}
+
+section#about.thankyou form label input:hover,
+section#about.thankyou form label input:focus {
+	border: 1px solid fade(@color_red, 50%);
+}
+
+section#about.thankyou form div.controls {
+	display: inline-block;
+	vertical-align: middle;
+	width: auto;
+	padding-right: 1em;
+}
+
+section#about.thankyou form div.controls button {
+	display: block;
+	width: 100%;
+	border: 1px solid transparent;
+	color: white;
+	padding: 0.5em 1em;
+	background-color: @color_red;
+	font-weight: 700;
+	transition: all 0.3s;
+}
+
+section#about.thankyou form div.controls button:hover {
+	transform: translatey(-10px);
+	box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+section.video_thankyou {
+	padding: 1em calc(~'(100% - 1200px)' / 2 );
+	text-align: center;
+}
+
+section.video_thankyou div.video select {
+	margin: 0 auto;
+	border: 1px solid @color_grey_dark;
+	color: @color_grey_dark;
+	padding: 0.5em 1em;
+	background-color: white;
+	display: block;
+}
+
+/*
 *Lobby Product gallery
 */
 
