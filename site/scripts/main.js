@@ -45,20 +45,36 @@ Site.is_mobile = function() {
 	return result;
 };
 
-	Site.handle_language_load = function(data) {
-		Site.dialog
-		      .setContent(data['whatsapp_message'])
-		      .setSize(600, 200)
-		      .setClearOnClose(false)
-		      .setTitle(data['dialog_title']);
+Site.handle_language_load = function(data) {
+	Site.dialog
+	  .setContent(data['whatsapp_message'])
+	  .setSize(600, 200)
+	  .setClearOnClose(false)
+	  .setTitle(data['dialog_title']);
 
-		if(Site.is_mobile())
+	if (Site.is_mobile())
 		Site.dialog.setSize(300, 280);
-	};
+};
+
+Site.handle_dialog_form = function() {
+	event.preventDefault();
+	Site.dialog_form.show();
+}
+
+Site.handle_dialog_video = function() {
+	event.preventDefault();
+	Site.dialog_video.show();
+}
+
+Site.handle_dialog = function() {
+	event.preventDefault();
+	Site.dialog.show();
+}
+
+
 /**
  * Function called when document and images have been completely loaded.
  */
-
 Site.on_load = function() {
 	if (Site.is_mobile()) {
 		Site.mobile_menu = new Caracal.MobileMenu();
@@ -97,83 +113,50 @@ Site.on_load = function() {
 
 	//Dialog Form
 	Site.dialog_form = new Dialog();
-		Site.dialog_form
-			.addClass('form')
-			.setContentFromDOM('div#floating_form');
+	Site.dialog_form
+		.addClass('form')
+		.setContentFromDOM('div#floating_form');
 
 	//Dialog Video
 	Site.dialog_video = new Dialog();
-		Site.dialog_video
-			.addClass('video_float')
-			.setContentFromDOM('div.video_floating');
+	Site.dialog_video
+		.addClass('video_float')
+		.setContentFromDOM('div.video_floating');
 
-
-	Site.handle_dialog_form = function() {
-		event.preventDefault();
-		Site.dialog_form.show();
-	}
-
-	Site.handle_dialog_video = function() {
-		event.preventDefault();
-		Site.dialog_video.show();
-	}
-
-	Site.handle_dialog = function() {
-		event.preventDefault();
-		Site.dialog.show();
-	}
-
+	// show contact form on page with green contact us button
 	if (document.querySelector('a#button_green_action')) {
 		Site.green_button = document.querySelector('a#button_green_action');
 		Site.green_button.addEventListener('click', Site.handle_dialog_form);
-		// create handler for submitting dialog form
-		Caracal.ContactForm.list[0].events.connect('submit-success', function(event) {
-			Site.dialog_form.hide();
-			return true;
-		});
-	}
+	};
 
-	if (!document.querySelector('a#button_green_action')) {
-		Site.header_button = document.querySelector('a.play_header');
-		Site.header_button.addEventListener('click', 	Site.handle_dialog_video);
-		Site.contact_button = document.querySelector('a.contact');
-		Site.contact_button.addEventListener('click', Site.handle_dialog_form);
+	// show contact form dialog when clicking on main menu contact item
+	var contact_button = document.querySelector('a.contact');
+	if (contact_button)
+		contact_button.addEventListener('click', Site.handle_dialog_form);
 
-		// create handler for submitting dialog form
-		Caracal.ContactForm.list[0].events.connect('submit-success', function(event) {
-			Site.dialog_form.hide();
-			return true;
-		});
+	// create click event to video link main header section
+	var header_button = document.querySelector('a.play_header');
+	if (header_button)
+		header_button.addEventListener('click', Site.handle_dialog_video);
 
-		// create handler for submitting dialog form
-		Caracal.ContactForm.list[1].events.connect('submit-success', function(event) {
-			Site.dialog_form.hide();
-			return true;
-		});
+	// create handler for submitting and redirecting to thank you page
+	for (var i=0, count=Caracal.ContactForm.list.length; i < count; i++) {
+		var form = Caracal.ContactForm.list[i];
+		form.events.connect('submit-success', function(event) {
+				var base_url = document.querySelector('meta[property=base-url]').getAttribute('content');
+				window.location = base_url + '/plus/thank-you';
 
-	}
-
-
-		Site.whatsapp_button = document.querySelector('a.whatsapp');
-		Site.floating_button = document.querySelector('a.floating_clicker');
-
-
-		Site.whatsapp_button.addEventListener('click', Site.handle_dialog);
-		Site.floating_button.addEventListener('click', Site.handle_dialog_form);
-
-
-	// connect submission to Google Analytics
-	var push_event = function(data) {
-			dataLayer.push({
-				event: "leadSent"
+				if (dataLayer)
+					dataLayer.push({event: "leadSent"});
 			});
-			return true;
-		};
+	}
 
-	for (var index in Caracal.ContactForm.list)
-		Caracal.ContactForm.list[index].events.connect('submit-success', push_event);
+	Site.whatsapp_button = document.querySelector('a.whatsapp');
+	Site.floating_button = document.querySelector('a.floating_clicker');
+
+	Site.whatsapp_button.addEventListener('click', Site.handle_dialog);
+	Site.floating_button.addEventListener('click', Site.handle_dialog_form);
 };
-
 
 // connect document `load` event with handler function
 $(Site.on_load);
