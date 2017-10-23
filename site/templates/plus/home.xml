@@ -236,6 +236,15 @@
 				</a>
 			</section>
 
+			<section id="disclaimer">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="disclaimer"
+					template="stock/article_generic.xml"
+					/>
+			</section>
+
 			<footer>
 				<cms:desktop>
 					<cms:template file="stock/copyright.xml">
