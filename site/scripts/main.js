@@ -47,28 +47,28 @@ Site.is_mobile = function() {
 
 Site.handle_language_load = function(data) {
 	Site.dialog
-	  .setContent(data['whatsapp_message'])
-	  .setSize(600, 200)
-	  .setClearOnClose(false)
-	  .setTitle(data['dialog_title']);
+	  .set_content(data['whatsapp_message'])
+	  .set_size(600, 200)
+	  .set_clear_on_close(false)
+	  .set_title(data['dialog_title']);
 
 	if (Site.is_mobile())
-		Site.dialog.setSize(300, 280);
+		Site.dialog.set_size(300, 280);
 };
 
 Site.handle_dialog_form = function() {
 	event.preventDefault();
-	Site.dialog_form.show();
+	Site.dialog_form.open();
 }
 
 Site.handle_dialog_video = function() {
 	event.preventDefault();
-	Site.dialog_video.show();
+	Site.dialog_video.open();
 }
 
 Site.handle_dialog = function() {
 	event.preventDefault();
-	Site.dialog.show();
+	Site.dialog.open();
 }
 
 
@@ -108,20 +108,20 @@ Site.on_load = function() {
 		.attachNextControl($('a.next'));
 
 	//Dialog js Whatsapp
-	Site.dialog = new Dialog();
+	Site.dialog = new Caracal.Dialog();
 	language_handler.getTextArrayAsync(null, ['whatsapp_message', 'dialog_title'], Site.handle_language_load);
 
 	//Dialog Form
-	Site.dialog_form = new Dialog();
+	Site.dialog_form = new Caracal.Dialog();
 	Site.dialog_form
-		.addClass('form')
-		.setContentFromDOM('div#floating_form');
+		.add_class('form')
+		.set_content_from_dom('div#floating_form');
 
 	//Dialog Video
-	Site.dialog_video = new Dialog();
+	Site.dialog_video = new Caracal.Dialog();
 	Site.dialog_video
-		.addClass('video_float')
-		.setContentFromDOM('div.video_floating');
+		.add_class('video_float')
+		.set_content_from_dom('div.video_floating');
 
 	// show contact form on page with green contact us button
 	if (document.querySelector('a#button_green_action')) {
