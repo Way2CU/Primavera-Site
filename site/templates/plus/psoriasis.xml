@@ -281,22 +281,9 @@
 					<cms:svg file="site-sprite.svg" symbol="arrow" class="arrow" />
 				</a>
 			</section>
-			<footer>
-				<cms:desktop>
-					<cms:template file="stock/copyright.xml">
-						<param name="holder" value="copyright_holder"/>
-						<param name="text" value="copyright_text"/>
-						<param name="light" value=""/>
-					</cms:template>
-				</cms:desktop>
-				<cms:mobile>
-					<cms:template file="stock/copyright.xml">
-						<param name="holder" value="copyright_holder"/>
-						<param name="text" value="copyright_text"/>
-						<param name="light" value=""/>
-					</cms:template>
-				</cms:mobile>
-			</footer>
+
+			<cms:template file="parts/footer.xml"/>
+
 			<cms:template file="parts/floating_form.xml"/>
 			<div class="video_floating">
 				<cms:template file="parts/video.xml" />

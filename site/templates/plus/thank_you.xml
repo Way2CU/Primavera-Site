@@ -139,51 +139,36 @@
 			</header>
 
 			<!-- Section about  thankyou-->
-					<section id="about" class="thankyou">
-						<cms:module
-							name="articles"
-							action="show"
-							text_id="thankyou_article"
-							template="parts/article.xml"
-						/>
-						<cms:module
-							name="contact_form"
-							action="show"
-							text_id="thankyou_form"
-						/>
-						<cms:mobile>
-							<img
-								src="_BASEURL.'/site/images/mobile_background.jpg'"
-								alt="background_mobile"
-								cms:eval="src"
-								class="background"
-							/>
-						</cms:mobile>
-					</section>
-
-					<section class="video_thankyou">
-						<div class="video">
-							<cms:template file="parts/video.xml" />
-						</div>
-					</section>
-
-
-			<footer>
-				<cms:desktop>
-					<cms:template file="stock/copyright.xml">
-						<param name="holder" value="copyright_holder"/>
-						<param name="text" value="copyright_text"/>
-						<param name="light" value=""/>
-					</cms:template>
-				</cms:desktop>
+			<section id="about" class="thankyou">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="thankyou_article"
+					template="parts/article.xml"
+					/>
+				<cms:module
+					name="contact_form"
+					action="show"
+					text_id="thankyou_form"
+					/>
 				<cms:mobile>
-					<cms:template file="stock/copyright.xml">
-						<param name="holder" value="copyright_holder"/>
-						<param name="text" value="copyright_text"/>
-						<param name="light" value=""/>
-					</cms:template>
+					<img
+						src="_BASEURL.'/site/images/mobile_background.jpg'"
+						alt="background_mobile"
+						cms:eval="src"
+						class="background"
+						/>
 				</cms:mobile>
-			</footer>
+			</section>
+
+			<section class="video_thankyou">
+				<div class="video">
+					<cms:template file="parts/video.xml" />
+				</div>
+			</section>
+
+
+			<cms:template file="parts/footer.xml"/>
 		</body>
 	</html>
 </document>

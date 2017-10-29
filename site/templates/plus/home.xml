@@ -236,31 +236,7 @@
 				</a>
 			</section>
 
-			<section id="disclaimer">
-				<cms:module
-					name="articles"
-					action="show"
-					text_id="disclaimer"
-					template="stock/article_generic.xml"
-					/>
-			</section>
-
-			<footer>
-				<cms:desktop>
-					<cms:template file="stock/copyright.xml">
-						<param name="holder" value="copyright_holder"/>
-						<param name="text" value="copyright_text"/>
-						<param name="light" value=""/>
-					</cms:template>
-				</cms:desktop>
-				<cms:mobile>
-					<cms:template file="stock/copyright.xml">
-						<param name="holder" value="copyright_holder"/>
-						<param name="text" value="copyright_text"/>
-						<param name="light" value=""/>
-					</cms:template>
-				</cms:mobile>
-			</footer>
+			<cms:template file="parts/footer.xml"/>
 
 			<cms:template file="parts/floating_form.xml"/>
 			<div class="video_floating">

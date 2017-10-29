@@ -6,8 +6,11 @@
  * Authors:Iliya Melishev, Vladimir Anusic
  */
 
-// section disclaimer
-section#disclaimer {
+/**
+ * Footer, section disclaimer
+ */
+
+footer section#disclaimer {
 	text-align: center;
 
 	article {
@@ -17,13 +20,16 @@ section#disclaimer {
 
 		p {
 			font-size: 0.8rem;
+			width: 100%;
 		}
 	}
 }
 
 footer {
 	background-color: @color_grey_dark;
-	padding: 0 calc(~'(100% - 960px)' / 2);
+	padding: 1rem calc(~'(100% - 1200px)' / 2);
+	padding-bottom: 0;
+	margin-bottom: -2rem;
 }
 
 /*
@@ -38,7 +44,7 @@ footer div.copyright.light {
 	text-align: center;
 	margin: 0 auto;
 
-	background-position: calc(~'(100% - 350px)') center;
+	background-position: calc(~'50% - 100px') center;
 }
 
 footer div.copyright a {
